@@ -1,0 +1,957 @@
+<iframe class="absolute bg-white" srcdoc="&lt;html class=&quot;h-full&quot; lang=&quot;en&quot;&gt;&lt;head&gt;
+    &lt;meta charSet=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot; /&gt;
+    &lt;link
+      rel=&quot;preconnect&quot;
+      href=&quot;https://fonts.gstatic.com&quot;
+      crossOrigin=&quot;anonymous&quot;
+    /&gt;
+    &lt;link
+      id=&quot;google-fonts-link&quot;
+      href=&quot;https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;family=Open+Sans:wght@300;400;500;600;700&amp;display=swap&quot;
+      rel=&quot;stylesheet&quot;
+    /&gt;
+    &lt;script
+      src=&quot;https://kit.fontawesome.com/8e98006f77.js&quot;
+      crossOrigin=&quot;anonymous&quot;
+    &gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.tailwindcss.com&quot;&gt;&lt;/script&gt;
+    &lt;style&gt;:root { --accent-color: #ff5722; --accent2-color: #795548; --accent3-color: #ffab91; --accent4-color: #bcaaa4; --primary-color: #d84315; --dark-text-color: #212121; --gray-text-color: #9e9e9e; --button-padding-x: 12px; --button-padding-y: 8px; --font-family-body: 'Open Sans', sans-serif; --light-text-color: #e0e0e0; --dark-border-color: #8d6e63; --light-border-color: #ffccbc; --font-family-heading: 'Montserrat', sans-serif; --button-rounded-radius: 6px; --dark-background-color: #121212; --light-background-color: #fbeee6; --medium-background-color: #f3dccd; --primary-button-text-color: #ffffff; --secondary-button-bg-color: #424242; --secondary-button-text-color: #ffffff; --primary-button-hover-bg-color: #c37b55; --primary-button-hover-text-color: #ffffff; --secondary-button-hover-bg-color: #616161; --secondary-button-hover-text-color: #f5f5f5; }&lt;/style&gt;
+    &lt;style&gt;
+
+.hovered-element {
+  outline: #3871E0 dashed 2px;
+}
+
+.clicked-element {
+  outline: #3871E0 solid 2px;
+}
+
+.clicked-code-section {
+  border: #3B82F6 solid 2px;
+}
+&lt;/style&gt;
+    
+    &lt;title&gt;Smart Services GN – Boutique Automobile en Guinée | Produits &amp; Accessoires Automobiles&lt;/title&gt;
+&lt;meta name=&quot;description&quot; content=&quot;Découvrez Smart Services GN, votre boutique automobile en Guinée spécialisée dans les produits, accessoires, et solutions innovantes pour véhicules. Livraison rapide et service professionnel.&quot; /&gt;
+&lt;meta name=&quot;language&quot; content=&quot;fr&quot; /&gt;
+&lt;meta property=&quot;og:title&quot; content=&quot;Smart Services GN – Boutique Automobile en Guinée&quot; /&gt;
+&lt;meta property=&quot;og:description&quot; content=&quot;Explorez notre gamme de produits automobiles. Livraison rapide et solutions pour votre véhicule.&quot; /&gt;
+&lt;meta name=&quot;twitter:card&quot; content=&quot;summary&quot; /&gt;
+&lt;meta name=&quot;twitter:title&quot; content=&quot;Smart Services GN – Boutique Automobile en Guinée&quot; /&gt;
+&lt;meta name=&quot;twitter:description&quot; content=&quot;Découvrez des solutions automobiles innovantes, livrées rapidement en Guinée.&quot; /&gt;
+  &lt;/head&gt;&lt;body class=&quot;h-full bg-white&quot;&gt;
+    &lt;div class=&quot;frame-root&quot;&gt;
+      &lt;div class=&quot;frame-content&quot;&gt;
+        &lt;div class=&quot;[font-family:var(--font-family-body)]&quot;&gt;&lt;div&gt;&lt;header id=&quot;global-header&quot; class=&quot;code-section bg-white shadow-md sticky top-0 z-50&quot;&gt;
+  &lt;div class=&quot;container mx-auto px-4&quot;&gt;
+    &lt;div class=&quot;flex items-center justify-between&quot;&gt;
+      &lt;!-- Logo --&gt;
+      &lt;a href=&quot;/&quot; class=&quot;flex-shrink-0&quot;&gt;
+        &lt;img src=&quot;https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/8fed5888-1952-4439-d691-a78e67ba3300/publicContain&quot; alt=&quot;Smart Services GN&quot; class=&quot;h-28 py-2&quot; data-logo=&quot;&quot;&gt;
+      &lt;/a&gt;
+
+      &lt;!-- Desktop Navigation --&gt;
+      &lt;nav class=&quot;hidden lg:flex items-center space-x-8&quot;&gt;
+        &lt;a href=&quot;/about&quot; class=&quot;text-[var(--dark-text-color)] hover:text-[var(--primary-color)] font-medium transition-colors duration-300&quot;&gt;À propos de nous&lt;/a&gt;
+        &lt;a href=&quot;/categories&quot; class=&quot;text-[var(--dark-text-color)] hover:text-[var(--primary-color)] font-medium transition-colors duration-300&quot;&gt;Catégories de Produits&lt;/a&gt;
+        &lt;a href=&quot;/shop&quot; class=&quot;text-[var(--dark-text-color)] hover:text-[var(--primary-color)] font-medium transition-colors duration-300&quot;&gt;Boutique&lt;/a&gt;
+        &lt;a href=&quot;/contact&quot; class=&quot;text-[var(--dark-text-color)] hover:text-[var(--primary-color)] font-medium transition-colors duration-300&quot;&gt;Contactez-nous&lt;/a&gt;
+        &lt;a href=&quot;/shop&quot; class=&quot;bg-[var(--primary-color)] text-[var(--primary-button-text-color)] px-6 py-3 rounded-lg font-semibold hover:bg-[var(--primary-button-hover-bg-color)] transition-all duration-300 transform hover:scale-105&quot;&gt;Shop Now&lt;/a&gt;
+      &lt;/nav&gt;
+
+      &lt;!-- Mobile Menu Toggle --&gt;
+      &lt;button data-landingsite-mobile-menu-toggle=&quot;&quot; class=&quot;lg:hidden text-[var(--dark-text-color)] p-2 focus:outline-none&quot;&gt;
+        &lt;i class=&quot;fas fa-bars text-2xl&quot;&gt;&lt;/i&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Mobile Navigation --&gt;
+    &lt;nav data-landingsite-mobile-menu=&quot;&quot; class=&quot;hidden lg:hidden pb-4 pt-2&quot;&gt;
+      &lt;div class=&quot;flex flex-col space-y-3&quot;&gt;
+        &lt;a href=&quot;/about&quot; class=&quot;text-[var(--dark-text-color)] hover:text-[var(--primary-color)] font-medium py-2 border-b border-[var(--light-border-color)] transition-colors duration-300&quot;&gt;À propos de nous&lt;/a&gt;
+        &lt;a href=&quot;/categories&quot; class=&quot;text-[var(--dark-text-color)] hover:text-[var(--primary-color)] font-medium py-2 border-b border-[var(--light-border-color)] transition-colors duration-300&quot;&gt;Catégories de Produits&lt;/a&gt;
+        &lt;a href=&quot;/shop&quot; class=&quot;text-[var(--dark-text-color)] hover:text-[var(--primary-color)] font-medium py-2 border-b border-[var(--light-border-color)] transition-colors duration-300&quot;&gt;Boutique&lt;/a&gt;
+        &lt;a href=&quot;/contact&quot; class=&quot;text-[var(--dark-text-color)] hover:text-[var(--primary-color)] font-medium py-2 border-b border-[var(--light-border-color)] transition-colors duration-300&quot;&gt;Contactez-nous&lt;/a&gt;
+        &lt;a href=&quot;/shop&quot; class=&quot;bg-[var(--primary-color)] text-[var(--primary-button-text-color)] px-6 py-3 rounded-lg font-semibold text-center hover:bg-[var(--primary-button-hover-bg-color)] transition-all duration-300 mt-2&quot;&gt;Shop Now&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/nav&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
+&lt;/div&gt;&lt;div&gt;&lt;section class=&quot;code-section relative bg-gradient-to-br from-[var(--dark-background-color)] to-[var(--accent2-color)] text-white overflow-hidden&quot; id=&quot;s4x6l7d&quot;&gt;
+  &lt;!-- Background Pattern --&gt;
+  &lt;div class=&quot;absolute inset-0 opacity-10&quot;&gt;
+    &lt;div class=&quot;absolute transform rotate-12 -top-20 -right-20 w-96 h-96 bg-[var(--primary-color)] rounded-full blur-3xl&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;absolute transform -rotate-12 -bottom-20 -left-20 w-96 h-96 bg-[var(--accent-color)] rounded-full blur-3xl&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;container mx-auto px-4 py-16 lg:py-24 relative z-10&quot;&gt;
+    &lt;div class=&quot;grid lg:grid-cols-2 gap-12 items-center&quot;&gt;
+      &lt;!-- Left Content --&gt;
+      &lt;div class=&quot;text-center lg:text-left&quot;&gt;
+        &lt;div class=&quot;inline-block bg-[var(--accent-color)] text-white px-4 py-2 rounded-full text-sm font-semibold mb-6 animate-pulse&quot;&gt;
+          &lt;i class=&quot;fas fa-star mr-2&quot;&gt;&lt;/i&gt;Leader en Guinée
+        &lt;/div&gt;
+
+        &lt;h1 class=&quot;font-[var(--font-family-heading)] text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight&quot;&gt;
+          Tous vos Produits
+          &lt;span class=&quot;text-[var(--accent3-color)]&quot;&gt;Automobiles&lt;/span&gt; en un
+          Clic
+        &lt;/h1&gt;
+
+        &lt;p class=&quot;text-lg sm:text-xl text-[var(--light-text-color)] mb-8 leading-relaxed&quot;&gt;
+          Entretien, diagnostic, performance, esthétique… Smart Services GN vous
+          propose des solutions automobiles innovantes et abordables, livrées
+          partout en Guinée.
+        &lt;/p&gt;
+
+        &lt;!-- CTA Buttons --&gt;
+        &lt;div class=&quot;flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8&quot;&gt;
+          &lt;a href=&quot;/shop&quot; class=&quot;group bg-[var(--primary-color)] text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-[var(--primary-button-hover-bg-color)] transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center&quot;&gt;
+            &lt;i class=&quot;fas fa-shopping-cart mr-3&quot;&gt;&lt;/i&gt;
+            Voir les Produits
+            &lt;i class=&quot;fas fa-arrow-right ml-3 group-hover:translate-x-2 transition-transform duration-300&quot;&gt;&lt;/i&gt;
+          &lt;/a&gt;
+
+          &lt;a href=&quot;https://wa.me/224YOUR_NUMBER&quot; target=&quot;_blank&quot; class=&quot;bg-green-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center&quot;&gt;
+            &lt;i class=&quot;fab fa-whatsapp mr-3 text-2xl&quot;&gt;&lt;/i&gt;
+            Commander via WhatsApp
+          &lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;p class=&quot;text-sm text-[var(--gray-text-color)] italic&quot;&gt;
+          &lt;i class=&quot;fas fa-check-circle text-green-400 mr-2&quot;&gt;&lt;/i&gt;Livraison
+          rapide à Conakry et dans toute la Guinée
+        &lt;/p&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Right Image --&gt;
+      &lt;div class=&quot;relative&quot;&gt;
+        &lt;div class=&quot;relative rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500&quot;&gt;
+          &lt;img src=&quot;https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/269191f1-de33-40e4-80ab-bfca8ec8c600/publicContain&quot; alt=&quot;Automotive Engine Parts: Cylinder Head, Engine Block, Crankshaft, Pistons. Overhaul at Car Service.&quot; class=&quot;w-full h-auto&quot; data-media=&quot;{&amp;quot;id&amp;quot;:&amp;quot;2221491160&amp;quot;,&amp;quot;src&amp;quot;:&amp;quot;iStock&amp;quot;,&amp;quot;type&amp;quot;:&amp;quot;image&amp;quot;}&quot;&gt;
+          &lt;div class=&quot;absolute inset-0 bg-gradient-to-t from-[var(--dark-background-color)] to-transparent opacity-40&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Floating Stats --&gt;
+        &lt;div class=&quot;absolute -bottom-6 -left-6 bg-white text-[var(--dark-text-color)] p-6 rounded-xl shadow-2xl transform hover:scale-110 transition-transform duration-300&quot;&gt;
+          &lt;div class=&quot;text-3xl font-bold text-[var(--primary-color)] font-[var(--font-family-heading)]&quot;&gt;
+            1000+
+          &lt;/div&gt;
+          &lt;div class=&quot;text-sm font-medium&quot;&gt;Clients Satisfaits&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;absolute -top-6 -right-6 bg-[var(--accent-color)] text-white p-6 rounded-xl shadow-2xl transform hover:scale-110 transition-transform duration-300&quot;&gt;
+          &lt;div class=&quot;text-3xl font-bold font-[var(--font-family-heading)]&quot;&gt;
+            &lt;i class=&quot;fas fa-shipping-fast&quot;&gt;&lt;/i&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;text-sm font-medium&quot;&gt;Livraison Rapide&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Bottom Wave --&gt;
+  &lt;div class=&quot;absolute bottom-0 left-0 right-0&quot;&gt;
+    &lt;svg viewBox=&quot;0 0 1440 120&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;w-full h-auto&quot;&gt;
+      &lt;path d=&quot;M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z&quot; fill=&quot;#fbeee6&quot;&gt;&lt;/path&gt;
+    &lt;/svg&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;code-section bg-[var(--light-background-color)] py-16 lg:py-24&quot; id=&quot;scc08bp&quot;&gt;
+  &lt;div class=&quot;container mx-auto px-4&quot;&gt;
+    &lt;!-- Section Header --&gt;
+    &lt;div class=&quot;text-center mb-16&quot;&gt;
+      &lt;h2 class=&quot;font-[var(--font-family-heading)] text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--dark-text-color)] mb-4&quot;&gt;
+        Nos &lt;span class=&quot;text-[var(--primary-color)]&quot;&gt;Catégories&lt;/span&gt; de
+        Produits
+      &lt;/h2&gt;
+      &lt;p class=&quot;text-lg text-[var(--gray-text-color)] max-w-2xl mx-auto&quot;&gt;
+        Découvrez notre gamme complète de produits et accessoires pour
+        l'entretien et la performance de votre véhicule
+      &lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Categories Grid --&gt;
+    &lt;div class=&quot;grid md:grid-cols-3 gap-8&quot;&gt;
+      &lt;!-- Category 1: Produits Automobiles --&gt;
+      &lt;a href=&quot;/categories#automotive-products&quot; class=&quot;group&quot;&gt;
+        &lt;div class=&quot;bg-white rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-500&quot;&gt;
+          &lt;div class=&quot;relative h-64 overflow-hidden&quot;&gt;
+            &lt;img src=&quot;https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/5d18f852-6ddf-463c-72cb-86cc77d93900/public&quot; alt=&quot;New car wheels and filters on a gray background. Parts closeup on a gray background&quot; class=&quot;w-full h-full object-cover group-hover:scale-110 transition-transform duration-500&quot; data-media=&quot;{&amp;quot;id&amp;quot;:&amp;quot;478107962&amp;quot;,&amp;quot;src&amp;quot;:&amp;quot;iStock&amp;quot;,&amp;quot;type&amp;quot;:&amp;quot;image&amp;quot;}&quot;&gt;
+            &lt;div class=&quot;absolute inset-0 bg-gradient-to-t from-[var(--dark-background-color)] to-transparent opacity-60&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;absolute top-4 right-4 bg-[var(--accent-color)] text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg&quot;&gt;
+              &lt;i class=&quot;fas fa-cogs&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;div class=&quot;p-6&quot;&gt;
+            &lt;h3 class=&quot;font-[var(--font-family-heading)] text-2xl font-bold text-[var(--dark-text-color)] mb-3 group-hover:text-[var(--primary-color)] transition-colors duration-300&quot;&gt;
+              Produits Automobiles
+            &lt;/h3&gt;
+            &lt;ul class=&quot;space-y-2 mb-4 text-[var(--gray-text-color)]&quot;&gt;
+              &lt;li class=&quot;flex items-center&quot;&gt;
+                &lt;i class=&quot;fas fa-check-circle text-[var(--primary-color)] mr-2&quot;&gt;&lt;/i&gt;
+                Outils de diagnostic OBDII
+              &lt;/li&gt;
+              &lt;li class=&quot;flex items-center&quot;&gt;
+                &lt;i class=&quot;fas fa-check-circle text-[var(--primary-color)] mr-2&quot;&gt;&lt;/i&gt;
+                Additifs moteur &amp;amp; carburant
+              &lt;/li&gt;
+              &lt;li class=&quot;flex items-center&quot;&gt;
+                &lt;i class=&quot;fas fa-check-circle text-[var(--primary-color)] mr-2&quot;&gt;&lt;/i&gt;
+                Produits anti-fumée moteur
+              &lt;/li&gt;
+              &lt;li class=&quot;flex items-center&quot;&gt;
+                &lt;i class=&quot;fas fa-check-circle text-[var(--primary-color)] mr-2&quot;&gt;&lt;/i&gt;
+                Nettoyants moteur
+              &lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;div class=&quot;flex items-center justify-between&quot;&gt;
+              &lt;span class=&quot;text-[var(--primary-color)] font-semibold group-hover:translate-x-2 transition-transform duration-300&quot;&gt;Découvrir &lt;i class=&quot;fas fa-arrow-right ml-2&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/a&gt;
+
+      &lt;!-- Category 2: Produits Esthétiques --&gt;
+      &lt;a href=&quot;/categories#aesthetic-products&quot; class=&quot;group&quot;&gt;
+        &lt;div class=&quot;bg-white rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-500&quot;&gt;
+          &lt;div class=&quot;relative h-64 overflow-hidden&quot;&gt;
+            &lt;img src=&quot;https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/9597764d-98ba-4660-8764-2b10cd801200/publicContain&quot; alt=&quot;Worker technician applies window tint film to vehicle in workshop setting, focusing on precision quality.&quot; class=&quot;w-full h-full object-cover group-hover:scale-110 transition-transform duration-500&quot; data-media=&quot;{&amp;quot;id&amp;quot;:&amp;quot;2188220420&amp;quot;,&amp;quot;src&amp;quot;:&amp;quot;iStock&amp;quot;,&amp;quot;type&amp;quot;:&amp;quot;image&amp;quot;}&quot;&gt;
+            &lt;div class=&quot;absolute inset-0 bg-gradient-to-t from-[var(--dark-background-color)] to-transparent opacity-60&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;absolute top-4 right-4 bg-[var(--accent-color)] text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg&quot;&gt;
+              &lt;i class=&quot;fas fa-star&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;div class=&quot;p-6&quot;&gt;
+            &lt;h3 class=&quot;font-[var(--font-family-heading)] text-2xl font-bold text-[var(--dark-text-color)] mb-3 group-hover:text-[var(--primary-color)] transition-colors duration-300&quot;&gt;
+              Esthétique &amp;amp; Entretien
+            &lt;/h3&gt;
+            &lt;ul class=&quot;space-y-2 mb-4 text-[var(--gray-text-color)]&quot;&gt;
+              &lt;li class=&quot;flex items-center&quot;&gt;
+                &lt;i class=&quot;fas fa-check-circle text-[var(--primary-color)] mr-2&quot;&gt;&lt;/i&gt;
+                Crème anti-rayures
+              &lt;/li&gt;
+              &lt;li class=&quot;flex items-center&quot;&gt;
+                &lt;i class=&quot;fas fa-check-circle text-[var(--primary-color)] mr-2&quot;&gt;&lt;/i&gt;
+                Stylo réparateur de peinture
+              &lt;/li&gt;
+              &lt;li class=&quot;flex items-center&quot;&gt;
+                &lt;i class=&quot;fas fa-check-circle text-[var(--primary-color)] mr-2&quot;&gt;&lt;/i&gt;
+                Mousse dissolvante intérieur
+              &lt;/li&gt;
+              &lt;li class=&quot;flex items-center&quot;&gt;
+                &lt;i class=&quot;fas fa-check-circle text-[var(--primary-color)] mr-2&quot;&gt;&lt;/i&gt;
+                Parfums voiture
+              &lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;div class=&quot;flex items-center justify-between&quot;&gt;
+              &lt;span class=&quot;text-[var(--primary-color)] font-semibold group-hover:translate-x-2 transition-transform duration-300&quot;&gt;Découvrir &lt;i class=&quot;fas fa-arrow-right ml-2&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/a&gt;
+
+      &lt;!-- Category 3: Accessoires --&gt;
+      &lt;a href=&quot;/categories#accessories&quot; class=&quot;group&quot;&gt;
+        &lt;div class=&quot;bg-white rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 hover:shadow-2xl transition-all duration-500&quot;&gt;
+          &lt;div class=&quot;relative h-64 overflow-hidden&quot;&gt;
+            &lt;img src=&quot;https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/5e2c4890-1066-4843-ccd2-867c9f977f00/public&quot; alt=&quot;Car Diagnostic Service And Electronics Repair By Mechanic Worker&quot; class=&quot;w-full h-full object-cover group-hover:scale-110 transition-transform duration-500&quot; data-media=&quot;{&amp;quot;id&amp;quot;:&amp;quot;1350239751&amp;quot;,&amp;quot;src&amp;quot;:&amp;quot;iStock&amp;quot;,&amp;quot;type&amp;quot;:&amp;quot;image&amp;quot;}&quot;&gt;
+            &lt;div class=&quot;absolute inset-0 bg-gradient-to-t from-[var(--dark-background-color)] to-transparent opacity-60&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;absolute top-4 right-4 bg-[var(--accent-color)] text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg&quot;&gt;
+              &lt;i class=&quot;fas fa-wrench&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;div class=&quot;p-6&quot;&gt;
+            &lt;h3 class=&quot;font-[var(--font-family-heading)] text-2xl font-bold text-[var(--dark-text-color)] mb-3 group-hover:text-[var(--primary-color)] transition-colors duration-300&quot;&gt;
+              Accessoires Véhicules
+            &lt;/h3&gt;
+            &lt;ul class=&quot;space-y-2 mb-4 text-[var(--gray-text-color)]&quot;&gt;
+              &lt;li class=&quot;flex items-center&quot;&gt;
+                &lt;i class=&quot;fas fa-check-circle text-[var(--primary-color)] mr-2&quot;&gt;&lt;/i&gt;
+                Autocollants lumineux
+              &lt;/li&gt;
+              &lt;li class=&quot;flex items-center&quot;&gt;
+                &lt;i class=&quot;fas fa-check-circle text-[var(--primary-color)] mr-2&quot;&gt;&lt;/i&gt;
+                Outils de réparation
+              &lt;/li&gt;
+              &lt;li class=&quot;flex items-center&quot;&gt;
+                &lt;i class=&quot;fas fa-check-circle text-[var(--primary-color)] mr-2&quot;&gt;&lt;/i&gt;
+                Équipements électroniques
+              &lt;/li&gt;
+              &lt;li class=&quot;flex items-center&quot;&gt;
+                &lt;i class=&quot;fas fa-check-circle text-[var(--primary-color)] mr-2&quot;&gt;&lt;/i&gt;
+                Accessoires pratiques
+              &lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;div class=&quot;flex items-center justify-between&quot;&gt;
+              &lt;span class=&quot;text-[var(--primary-color)] font-semibold group-hover:translate-x-2 transition-transform duration-300&quot;&gt;Découvrir &lt;i class=&quot;fas fa-arrow-right ml-2&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Bottom CTA --&gt;
+    &lt;div class=&quot;text-center mt-12&quot;&gt;
+      &lt;a href=&quot;/shop&quot; class=&quot;inline-flex items-center bg-[var(--primary-color)] text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-[var(--primary-button-hover-bg-color)] transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl&quot;&gt;
+        Voir Tous les Produits
+        &lt;i class=&quot;fas fa-arrow-right ml-3&quot;&gt;&lt;/i&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;code-section bg-white py-16 lg:py-24&quot; id=&quot;s9hzgur&quot;&gt;
+  &lt;div class=&quot;container mx-auto px-4&quot;&gt;
+    &lt;div class=&quot;grid lg:grid-cols-2 gap-12 items-center&quot;&gt;
+      &lt;!-- Left Side - Image --&gt;
+      &lt;div class=&quot;relative order-2 lg:order-1&quot;&gt;
+        &lt;div class=&quot;relative rounded-2xl overflow-hidden shadow-2xl&quot;&gt;
+          &lt;img src=&quot;https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/db6cd928-71b7-4e82-e3eb-1293272c0700/public&quot; alt=&quot;Mechanic is repairing and replacing a battery charger at car service center. Mechanic man holding alternator of the car in repair and maintenance garage.&quot; class=&quot;w-full h-auto&quot; data-media=&quot;{&amp;quot;id&amp;quot;:&amp;quot;2191448944&amp;quot;,&amp;quot;src&amp;quot;:&amp;quot;iStock&amp;quot;,&amp;quot;type&amp;quot;:&amp;quot;image&amp;quot;}&quot;&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Floating Badge --&gt;
+        &lt;div class=&quot;absolute -bottom-6 -right-6 bg-[var(--accent-color)] text-white p-8 rounded-2xl shadow-2xl transform hover:rotate-6 transition-transform duration-300&quot;&gt;
+          &lt;div class=&quot;text-center&quot;&gt;
+            &lt;div class=&quot;text-4xl font-bold font-[var(--font-family-heading)]&quot;&gt;
+              +1000
+            &lt;/div&gt;
+            &lt;div class=&quot;text-sm font-medium&quot;&gt;Clients Satisfaits&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Right Side - Content --&gt;
+      &lt;div class=&quot;order-1 lg:order-2&quot;&gt;
+        &lt;div class=&quot;inline-block bg-[var(--medium-background-color)] text-[var(--primary-color)] px-4 py-2 rounded-full text-sm font-semibold mb-6&quot;&gt;
+          &lt;i class=&quot;fas fa-star mr-2&quot;&gt;&lt;/i&gt;Pourquoi Smart Services GN ?
+        &lt;/div&gt;
+
+        &lt;h2 class=&quot;font-[var(--font-family-heading)] text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--dark-text-color)] mb-6 leading-tight&quot;&gt;
+          Votre Partenaire Automobile de
+          &lt;span class=&quot;text-[var(--primary-color)]&quot;&gt;Confiance&lt;/span&gt;
+        &lt;/h2&gt;
+
+        &lt;p class=&quot;text-lg text-[var(--gray-text-color)] mb-8 leading-relaxed&quot;&gt;
+          Smart Services GN s'engage à proposer des solutions automobiles
+          innovantes et abordables pour tous les propriétaires de véhicules en
+          Guinée.
+        &lt;/p&gt;
+
+        &lt;!-- Benefits List --&gt;
+        &lt;div class=&quot;space-y-6&quot;&gt;
+          &lt;!-- Benefit 1 --&gt;
+          &lt;div class=&quot;flex items-start group&quot;&gt;
+            &lt;div class=&quot;flex-shrink-0 w-14 h-14 bg-gradient-to-br from-[var(--primary-color)] to-[var(--accent-color)] rounded-xl flex items-center justify-center text-white text-2xl shadow-lg group-hover:scale-110 transition-transform duration-300&quot;&gt;
+              &lt;i class=&quot;fas fa-shipping-fast&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;ml-4&quot;&gt;
+              &lt;h3 class=&quot;font-[var(--font-family-heading)] text-xl font-bold text-[var(--dark-text-color)] mb-2&quot;&gt;
+                Livraison Rapide Partout
+              &lt;/h3&gt;
+              &lt;p class=&quot;text-[var(--gray-text-color)]&quot;&gt;
+                Livraison express à Conakry et partout en Guinée avec suivi de
+                commande en temps réel.
+              &lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;!-- Benefit 2 --&gt;
+          &lt;div class=&quot;flex items-start group&quot;&gt;
+            &lt;div class=&quot;flex-shrink-0 w-14 h-14 bg-gradient-to-br from-[var(--primary-color)] to-[var(--accent-color)] rounded-xl flex items-center justify-center text-white text-2xl shadow-lg group-hover:scale-110 transition-transform duration-300&quot;&gt;
+              &lt;i class=&quot;fas fa-shield-alt&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;ml-4&quot;&gt;
+              &lt;h3 class=&quot;font-[var(--font-family-heading)] text-xl font-bold text-[var(--dark-text-color)] mb-2&quot;&gt;
+                Produits Authentiques Garantis
+              &lt;/h3&gt;
+              &lt;p class=&quot;text-[var(--gray-text-color)]&quot;&gt;
+                Tous nos produits sont authentiques, testés et garantis pour une
+                performance optimale.
+              &lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;!-- Benefit 3 --&gt;
+          &lt;div class=&quot;flex items-start group&quot;&gt;
+            &lt;div class=&quot;flex-shrink-0 w-14 h-14 bg-gradient-to-br from-[var(--primary-color)] to-[var(--accent-color)] rounded-xl flex items-center justify-center text-white text-2xl shadow-lg group-hover:scale-110 transition-transform duration-300&quot;&gt;
+              &lt;i class=&quot;fas fa-headset&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;ml-4&quot;&gt;
+              &lt;h3 class=&quot;font-[var(--font-family-heading)] text-xl font-bold text-[var(--dark-text-color)] mb-2&quot;&gt;
+                Support Client Réactif
+              &lt;/h3&gt;
+              &lt;p class=&quot;text-[var(--gray-text-color)]&quot;&gt;
+                Notre équipe est disponible 7j/7 via WhatsApp, Facebook et
+                Instagram pour vous accompagner.
+              &lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;!-- Benefit 4 --&gt;
+          &lt;div class=&quot;flex items-start group&quot;&gt;
+            &lt;div class=&quot;flex-shrink-0 w-14 h-14 bg-gradient-to-br from-[var(--primary-color)] to-[var(--accent-color)] rounded-xl flex items-center justify-center text-white text-2xl shadow-lg group-hover:scale-110 transition-transform duration-300&quot;&gt;
+              &lt;i class=&quot;fas fa-tag&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;ml-4&quot;&gt;
+              &lt;h3 class=&quot;font-[var(--font-family-heading)] text-xl font-bold text-[var(--dark-text-color)] mb-2&quot;&gt;
+                Prix Compétitifs &amp;amp; Transparents
+              &lt;/h3&gt;
+              &lt;p class=&quot;text-[var(--gray-text-color)]&quot;&gt;
+                Les meilleurs prix du marché guinéen, sans frais cachés. Ce que
+                vous voyez, c'est ce que vous payez.
+              &lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- CTA Button --&gt;
+        &lt;div class=&quot;mt-10&quot;&gt;
+          &lt;a href=&quot;/about&quot; class=&quot;inline-flex items-center bg-[var(--secondary-button-bg-color)] text-[var(--secondary-button-text-color)] px-8 py-4 rounded-lg font-bold hover:bg-[var(--secondary-button-hover-bg-color)] transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl&quot;&gt;
+            En Savoir Plus
+            &lt;i class=&quot;fas fa-arrow-right ml-3&quot;&gt;&lt;/i&gt;
+          &lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;code-section bg-gradient-to-br from-[var(--light-background-color)] to-white py-16 lg:py-24 relative overflow-hidden&quot; id=&quot;sc7p2li&quot;&gt;
+  &lt;!-- Decorative Elements --&gt;
+  &lt;div class=&quot;absolute top-0 right-0 w-64 h-64 bg-[var(--accent3-color)] rounded-full blur-3xl opacity-20 -mr-32 -mt-32&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;absolute bottom-0 left-0 w-64 h-64 bg-[var(--primary-color)] rounded-full blur-3xl opacity-20 -ml-32 -mb-32&quot;&gt;&lt;/div&gt;
+
+  &lt;div class=&quot;container mx-auto px-4 relative z-10&quot;&gt;
+    &lt;!-- Section Header --&gt;
+    &lt;div class=&quot;text-center mb-16&quot;&gt;
+      &lt;h2 class=&quot;font-[var(--font-family-heading)] text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--dark-text-color)] mb-4&quot;&gt;
+        Commander en
+        &lt;span class=&quot;text-[var(--primary-color)]&quot;&gt;3 Étapes Simples&lt;/span&gt;
+      &lt;/h2&gt;
+      &lt;p class=&quot;text-lg text-[var(--gray-text-color)] max-w-2xl mx-auto&quot;&gt;
+        Obtenez vos produits automobiles en quelques clics, sans complications
+      &lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Steps Grid --&gt;
+    &lt;div class=&quot;grid md:grid-cols-3 gap-8 mb-12&quot;&gt;
+      &lt;!-- Step 1 --&gt;
+      &lt;div class=&quot;relative&quot;&gt;
+        &lt;div class=&quot;bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-[var(--primary-color)]&quot;&gt;
+          &lt;div class=&quot;absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-[var(--primary-color)] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg&quot;&gt;
+            1
+          &lt;/div&gt;
+          &lt;div class=&quot;text-center mt-4&quot;&gt;
+            &lt;div class=&quot;w-20 h-20 bg-gradient-to-br from-[var(--primary-color)] to-[var(--accent-color)] rounded-full flex items-center justify-center text-white text-3xl mx-auto mb-6 shadow-lg&quot;&gt;
+              &lt;i class=&quot;fas fa-mouse-pointer&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+            &lt;h3 class=&quot;font-[var(--font-family-heading)] text-2xl font-bold text-[var(--dark-text-color)] mb-4&quot;&gt;
+              Choisissez Vos Produits
+            &lt;/h3&gt;
+            &lt;p class=&quot;text-[var(--gray-text-color)] leading-relaxed&quot;&gt;
+              Parcourez notre catalogue et sélectionnez les produits dont vous
+              avez besoin pour votre véhicule.
+            &lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- Arrow --&gt;
+        &lt;div class=&quot;hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2 text-[var(--primary-color)] text-4xl z-20&quot;&gt;
+          &lt;i class=&quot;fas fa-arrow-right&quot;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Step 2 --&gt;
+      &lt;div class=&quot;relative&quot;&gt;
+        &lt;div class=&quot;bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-[var(--accent-color)]&quot;&gt;
+          &lt;div class=&quot;absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-[var(--accent-color)] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg&quot;&gt;
+            2
+          &lt;/div&gt;
+          &lt;div class=&quot;text-center mt-4&quot;&gt;
+            &lt;div class=&quot;w-20 h-20 bg-gradient-to-br from-[var(--accent-color)] to-[var(--accent3-color)] rounded-full flex items-center justify-center text-white text-3xl mx-auto mb-6 shadow-lg&quot;&gt;
+              &lt;i class=&quot;fas fa-shopping-cart&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+            &lt;h3 class=&quot;font-[var(--font-family-heading)] text-2xl font-bold text-[var(--dark-text-color)] mb-4&quot;&gt;
+              Passez Commande
+            &lt;/h3&gt;
+            &lt;p class=&quot;text-[var(--gray-text-color)] leading-relaxed&quot;&gt;
+              Ajoutez au panier et remplissez le formulaire simple avec vos
+              coordonnées et adresse de livraison.
+            &lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- Arrow --&gt;
+        &lt;div class=&quot;hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2 text-[var(--accent-color)] text-4xl z-20&quot;&gt;
+          &lt;i class=&quot;fas fa-arrow-right&quot;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Step 3 --&gt;
+      &lt;div class=&quot;relative&quot;&gt;
+        &lt;div class=&quot;bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-green-500&quot;&gt;
+          &lt;div class=&quot;absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg&quot;&gt;
+            3
+          &lt;/div&gt;
+          &lt;div class=&quot;text-center mt-4&quot;&gt;
+            &lt;div class=&quot;w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center text-white text-3xl mx-auto mb-6 shadow-lg&quot;&gt;
+              &lt;i class=&quot;fas fa-truck&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+            &lt;h3 class=&quot;font-[var(--font-family-heading)] text-2xl font-bold text-[var(--dark-text-color)] mb-4&quot;&gt;
+              Recevez Rapidement
+            &lt;/h3&gt;
+            &lt;p class=&quot;text-[var(--gray-text-color)] leading-relaxed&quot;&gt;
+              Votre commande est traitée et livrée rapidement à votre adresse à
+              Conakry ou partout en Guinée.
+            &lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Quick Order Options --&gt;
+    &lt;div class=&quot;bg-gradient-to-r from-[var(--dark-background-color)] to-[var(--accent2-color)] rounded-2xl p-8 lg:p-12 text-white shadow-2xl&quot;&gt;
+      &lt;div class=&quot;grid lg:grid-cols-2 gap-8 items-center&quot;&gt;
+        &lt;div&gt;
+          &lt;h3 class=&quot;font-[var(--font-family-heading)] text-2xl sm:text-3xl font-bold mb-4&quot;&gt;
+            Besoin d'une Commande Express ?
+          &lt;/h3&gt;
+          &lt;p class=&quot;text-[var(--light-text-color)] text-lg mb-6&quot;&gt;
+            Contactez-nous directement sur WhatsApp pour une assistance
+            immédiate et une commande ultra-rapide.
+          &lt;/p&gt;
+          &lt;ul class=&quot;space-y-3 mb-6&quot;&gt;
+            &lt;li class=&quot;flex items-center&quot;&gt;
+              &lt;i class=&quot;fas fa-check-circle text-green-400 mr-3 text-xl&quot;&gt;&lt;/i&gt;
+              &lt;span&gt;Réponse immédiate en quelques minutes&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;flex items-center&quot;&gt;
+              &lt;i class=&quot;fas fa-check-circle text-green-400 mr-3 text-xl&quot;&gt;&lt;/i&gt;
+              &lt;span&gt;Conseils personnalisés sur les produits&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;flex items-center&quot;&gt;
+              &lt;i class=&quot;fas fa-check-circle text-green-400 mr-3 text-xl&quot;&gt;&lt;/i&gt;
+              &lt;span&gt;Livraison express disponible&lt;/span&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;text-center lg:text-right&quot;&gt;
+          &lt;a href=&quot;https://wa.me/224YOUR_NUMBER&quot; target=&quot;_blank&quot; class=&quot;inline-flex items-center bg-green-600 text-white px-10 py-5 rounded-xl font-bold text-xl hover:bg-green-700 transition-all duration-300 transform hover:scale-105 shadow-2xl&quot;&gt;
+            &lt;i class=&quot;fab fa-whatsapp mr-4 text-3xl&quot;&gt;&lt;/i&gt;
+            &lt;div class=&quot;text-left&quot;&gt;
+              &lt;div class=&quot;text-sm opacity-90&quot;&gt;Commander via&lt;/div&gt;
+              &lt;div&gt;WhatsApp&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/a&gt;
+          &lt;p class=&quot;text-sm text-[var(--light-text-color)] mt-4 italic&quot;&gt;
+            Disponible 7j/7 pour vous servir
+          &lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;code-section bg-white py-16 lg:py-24&quot; id=&quot;swn1mj&quot;&gt;
+  &lt;div class=&quot;container mx-auto px-4&quot;&gt;
+    &lt;div class=&quot;grid lg:grid-cols-2 gap-12 items-center&quot;&gt;
+      &lt;!-- Left Side - Content --&gt;
+      &lt;div&gt;
+        &lt;div class=&quot;inline-block bg-[var(--medium-background-color)] text-[var(--primary-color)] px-4 py-2 rounded-full text-sm font-semibold mb-6&quot;&gt;
+          &lt;i class=&quot;fas fa-map-marker-alt mr-2&quot;&gt;&lt;/i&gt;Livraison &amp;amp; Contact
+        &lt;/div&gt;
+
+        &lt;h2 class=&quot;font-[var(--font-family-heading)] text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--dark-text-color)] mb-6 leading-tight&quot;&gt;
+          Livraison dans
+          &lt;span class=&quot;text-[var(--primary-color)]&quot;&gt;Toute la Guinée&lt;/span&gt;
+        &lt;/h2&gt;
+
+        &lt;p class=&quot;text-lg text-[var(--gray-text-color)] mb-8 leading-relaxed&quot;&gt;
+          Smart Services GN assure une livraison rapide et sécurisée de vos
+          produits automobiles partout en Guinée, avec un service client
+          disponible 7j/7.
+        &lt;/p&gt;
+
+        &lt;!-- Delivery Info Cards --&gt;
+        &lt;div class=&quot;space-y-4 mb-8&quot;&gt;
+          &lt;div class=&quot;bg-[var(--light-background-color)] rounded-xl p-6 border-l-4 border-[var(--primary-color)] hover:shadow-lg transition-shadow duration-300&quot;&gt;
+            &lt;div class=&quot;flex items-start&quot;&gt;
+              &lt;div class=&quot;w-12 h-12 bg-[var(--primary-color)] rounded-lg flex items-center justify-center text-white text-xl flex-shrink-0 mr-4&quot;&gt;
+                &lt;i class=&quot;fas fa-rocket&quot;&gt;&lt;/i&gt;
+              &lt;/div&gt;
+              &lt;div&gt;
+                &lt;h4 class=&quot;font-[var(--font-family-heading)] text-xl font-bold text-[var(--dark-text-color)] mb-2&quot;&gt;
+                  Livraison Express à Conakry
+                &lt;/h4&gt;
+                &lt;p class=&quot;text-[var(--gray-text-color)]&quot;&gt;
+                  24-48h de délai de livraison dans toute la capitale avec suivi
+                  en temps réel de votre commande.
+                &lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;div class=&quot;bg-[var(--light-background-color)] rounded-xl p-6 border-l-4 border-[var(--accent-color)] hover:shadow-lg transition-shadow duration-300&quot;&gt;
+            &lt;div class=&quot;flex items-start&quot;&gt;
+              &lt;div class=&quot;w-12 h-12 bg-[var(--accent-color)] rounded-lg flex items-center justify-center text-white text-xl flex-shrink-0 mr-4&quot;&gt;
+                &lt;i class=&quot;fas fa-map-marked-alt&quot;&gt;&lt;/i&gt;
+              &lt;/div&gt;
+              &lt;div&gt;
+                &lt;h4 class=&quot;font-[var(--font-family-heading)] text-xl font-bold text-[var(--dark-text-color)] mb-2&quot;&gt;
+                  Livraison Nationale
+                &lt;/h4&gt;
+                &lt;p class=&quot;text-[var(--gray-text-color)]&quot;&gt;
+                  Livraison possible à l'intérieur du pays (Kindia, Labé,
+                  Kankan, N'Zérékoré, etc.) sous 3-5 jours.
+                &lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;div class=&quot;bg-[var(--light-background-color)] rounded-xl p-6 border-l-4 border-green-500 hover:shadow-lg transition-shadow duration-300&quot;&gt;
+            &lt;div class=&quot;flex items-start&quot;&gt;
+              &lt;div class=&quot;w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center text-white text-xl flex-shrink-0 mr-4&quot;&gt;
+                &lt;i class=&quot;fas fa-shield-check&quot;&gt;&lt;/i&gt;
+              &lt;/div&gt;
+              &lt;div&gt;
+                &lt;h4 class=&quot;font-[var(--font-family-heading)] text-xl font-bold text-[var(--dark-text-color)] mb-2&quot;&gt;
+                  Emballage Sécurisé
+                &lt;/h4&gt;
+                &lt;p class=&quot;text-[var(--gray-text-color)]&quot;&gt;
+                  Tous nos produits sont emballés avec soin pour garantir leur
+                  arrivée en parfait état.
+                &lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Contact Methods --&gt;
+        &lt;div class=&quot;bg-gradient-to-r from-[var(--dark-background-color)] to-[var(--accent2-color)] rounded-2xl p-6 text-white&quot;&gt;
+          &lt;h4 class=&quot;font-[var(--font-family-heading)] text-xl font-bold mb-4&quot;&gt;
+            &lt;i class=&quot;fas fa-phone-alt mr-2&quot;&gt;&lt;/i&gt;Contactez-nous
+          &lt;/h4&gt;
+          &lt;div class=&quot;grid sm:grid-cols-2 gap-4&quot;&gt;
+            &lt;a href=&quot;https://wa.me/224YOUR_NUMBER&quot; target=&quot;_blank&quot; class=&quot;flex items-center bg-green-600 px-4 py-3 rounded-lg hover:bg-green-700 transition-colors duration-300&quot;&gt;
+              &lt;i class=&quot;fab fa-whatsapp text-2xl mr-3&quot;&gt;&lt;/i&gt;
+              &lt;span class=&quot;font-semibold&quot;&gt;WhatsApp&lt;/span&gt;
+            &lt;/a&gt;
+            &lt;a href=&quot;https://facebook.com/smartservicesgn&quot; target=&quot;_blank&quot; class=&quot;flex items-center bg-blue-600 px-4 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-300&quot;&gt;
+              &lt;i class=&quot;fab fa-facebook text-2xl mr-3&quot;&gt;&lt;/i&gt;
+              &lt;span class=&quot;font-semibold&quot;&gt;Facebook&lt;/span&gt;
+            &lt;/a&gt;
+            &lt;a href=&quot;https://instagram.com/smartservicesgn&quot; target=&quot;_blank&quot; class=&quot;flex items-center bg-pink-600 px-4 py-3 rounded-lg hover:bg-pink-700 transition-colors duration-300&quot;&gt;
+              &lt;i class=&quot;fab fa-instagram text-2xl mr-3&quot;&gt;&lt;/i&gt;
+              &lt;span class=&quot;font-semibold&quot;&gt;Instagram&lt;/span&gt;
+            &lt;/a&gt;
+            &lt;a href=&quot;/contact&quot; class=&quot;flex items-center bg-[var(--primary-color)] px-4 py-3 rounded-lg hover:bg-[var(--primary-button-hover-bg-color)] transition-colors duration-300&quot;&gt;
+              &lt;i class=&quot;fas fa-envelope text-2xl mr-3&quot;&gt;&lt;/i&gt;
+              &lt;span class=&quot;font-semibold&quot;&gt;Email&lt;/span&gt;
+            &lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Right Side - Image &amp; Stats --&gt;
+      &lt;div class=&quot;relative&quot;&gt;
+        &lt;div class=&quot;relative rounded-2xl overflow-hidden shadow-2xl&quot;&gt;
+          &lt;img src=&quot;https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/cb3dedd3-6422-47bf-7601-737528950900/public&quot; alt=&quot;Serviceman with digital tablet next to electric van with open hood. Electric vehicles maintenance.&quot; class=&quot;w-full h-auto&quot; data-media=&quot;{&amp;quot;id&amp;quot;:&amp;quot;2206813633&amp;quot;,&amp;quot;src&amp;quot;:&amp;quot;iStock&amp;quot;,&amp;quot;type&amp;quot;:&amp;quot;image&amp;quot;}&quot;&gt;
+          &lt;div class=&quot;absolute inset-0 bg-gradient-to-t from-[var(--dark-background-color)] to-transparent opacity-50&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Stats Overlay --&gt;
+        &lt;div class=&quot;absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-[var(--dark-background-color)] to-transparent&quot;&gt;
+          &lt;div class=&quot;grid grid-cols-3 gap-4 text-white text-center&quot;&gt;
+            &lt;div class=&quot;bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-4 hover:bg-opacity-20 transition-all duration-300&quot;&gt;
+              &lt;div class=&quot;text-3xl font-bold font-[var(--font-family-heading)] text-[var(--accent3-color)]&quot;&gt;
+                24/7
+              &lt;/div&gt;
+              &lt;div class=&quot;text-sm mt-1&quot;&gt;Support Client&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-4 hover:bg-opacity-20 transition-all duration-300&quot;&gt;
+              &lt;div class=&quot;text-3xl font-bold font-[var(--font-family-heading)] text-[var(--accent3-color)]&quot;&gt;
+                100%
+              &lt;/div&gt;
+              &lt;div class=&quot;text-sm mt-1&quot;&gt;Satisfait&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-4 hover:bg-opacity-20 transition-all duration-300&quot;&gt;
+              &lt;div class=&quot;text-3xl font-bold font-[var(--font-family-heading)] text-[var(--accent3-color)]&quot;&gt;
+                48h
+              &lt;/div&gt;
+              &lt;div class=&quot;text-sm mt-1&quot;&gt;Livraison&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;/div&gt;&lt;div&gt;&lt;footer id=&quot;global-footer&quot; class=&quot;code-section bg-[var(--dark-background-color)] text-[var(--light-text-color)] pt-16 pb-8&quot;&gt;
+  &lt;div class=&quot;container mx-auto px-4&quot;&gt;
+    &lt;!-- Main Footer Content --&gt;
+    &lt;div class=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12&quot;&gt;
+      &lt;!-- Company Info --&gt;
+      &lt;div&gt;
+        &lt;a href=&quot;/&quot; class=&quot;inline-block mb-6&quot;&gt;
+          &lt;img src=&quot;https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/8fed5888-1952-4439-d691-a78e67ba3300/publicContain&quot; alt=&quot;Smart Services GN&quot; class=&quot;h-28 py-2&quot; data-logo=&quot;&quot;&gt;
+        &lt;/a&gt;
+        &lt;p class=&quot;text-[var(--gray-text-color)] mb-6 leading-relaxed&quot;&gt;
+          Votre partenaire de confiance pour tous vos besoins automobiles en
+          Guinée. Produits authentiques, livraison rapide, service exceptionnel.
+        &lt;/p&gt;
+        &lt;!-- Social Media --&gt;
+        &lt;div class=&quot;flex space-x-4&quot;&gt;
+          &lt;a href=&quot;https://facebook.com/smartservicesgn&quot; target=&quot;_blank&quot; class=&quot;w-10 h-10 bg-[var(--accent2-color)] rounded-lg flex items-center justify-center text-white hover:bg-[var(--primary-color)] transition-colors duration-300&quot;&gt;
+            &lt;i class=&quot;fab fa-facebook-f&quot;&gt;&lt;/i&gt;
+          &lt;/a&gt;
+          &lt;a href=&quot;https://instagram.com/smartservicesgn&quot; target=&quot;_blank&quot; class=&quot;w-10 h-10 bg-[var(--accent2-color)] rounded-lg flex items-center justify-center text-white hover:bg-[var(--primary-color)] transition-colors duration-300&quot;&gt;
+            &lt;i class=&quot;fab fa-instagram&quot;&gt;&lt;/i&gt;
+          &lt;/a&gt;
+          &lt;a href=&quot;https://wa.me/224YOUR_NUMBER&quot; target=&quot;_blank&quot; class=&quot;w-10 h-10 bg-[var(--accent2-color)] rounded-lg flex items-center justify-center text-white hover:bg-green-600 transition-colors duration-300&quot;&gt;
+            &lt;i class=&quot;fab fa-whatsapp&quot;&gt;&lt;/i&gt;
+          &lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Quick Links --&gt;
+      &lt;div&gt;
+        &lt;h3 class=&quot;font-[var(--font-family-heading)] text-xl font-bold text-white mb-6&quot;&gt;
+          Liens Rapides
+        &lt;/h3&gt;
+        &lt;ul class=&quot;space-y-3&quot;&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;/&quot; class=&quot;text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 flex items-center&quot;&gt;
+              &lt;i class=&quot;fas fa-chevron-right text-xs mr-2&quot;&gt;&lt;/i&gt;
+              Accueil
+            &lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;/about&quot; class=&quot;text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 flex items-center&quot;&gt;
+              &lt;i class=&quot;fas fa-chevron-right text-xs mr-2&quot;&gt;&lt;/i&gt;
+              À propos de nous
+            &lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;/categories&quot; class=&quot;text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 flex items-center&quot;&gt;
+              &lt;i class=&quot;fas fa-chevron-right text-xs mr-2&quot;&gt;&lt;/i&gt;
+              Catégories de Produits
+            &lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;/shop&quot; class=&quot;text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 flex items-center&quot;&gt;
+              &lt;i class=&quot;fas fa-chevron-right text-xs mr-2&quot;&gt;&lt;/i&gt;
+              Boutique
+            &lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;/delivery-information&quot; class=&quot;text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 flex items-center&quot;&gt;
+              &lt;i class=&quot;fas fa-chevron-right text-xs mr-2&quot;&gt;&lt;/i&gt;
+              Livraison
+            &lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Support --&gt;
+      &lt;div&gt;
+        &lt;h3 class=&quot;font-[var(--font-family-heading)] text-xl font-bold text-white mb-6&quot;&gt;
+          Support
+        &lt;/h3&gt;
+        &lt;ul class=&quot;space-y-3&quot;&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;/contact&quot; class=&quot;text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 flex items-center&quot;&gt;
+              &lt;i class=&quot;fas fa-chevron-right text-xs mr-2&quot;&gt;&lt;/i&gt;
+              Contactez-nous
+            &lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;/return-policy&quot; class=&quot;text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 flex items-center&quot;&gt;
+              &lt;i class=&quot;fas fa-chevron-right text-xs mr-2&quot;&gt;&lt;/i&gt;
+              Politique de retour
+            &lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;/legal&quot; class=&quot;text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 flex items-center&quot;&gt;
+              &lt;i class=&quot;fas fa-chevron-right text-xs mr-2&quot;&gt;&lt;/i&gt;
+              Mentions légales
+            &lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;/cart&quot; class=&quot;text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 flex items-center&quot;&gt;
+              &lt;i class=&quot;fas fa-chevron-right text-xs mr-2&quot;&gt;&lt;/i&gt;
+              Panier
+            &lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Contact Info --&gt;
+      &lt;div&gt;
+        &lt;h3 class=&quot;font-[var(--font-family-heading)] text-xl font-bold text-white mb-6&quot;&gt;
+          Contactez-nous
+        &lt;/h3&gt;
+        &lt;ul class=&quot;space-y-4&quot;&gt;
+          &lt;li class=&quot;flex items-start&quot;&gt;
+            &lt;i class=&quot;fas fa-map-marker-alt text-[var(--primary-color)] mt-1 mr-3&quot;&gt;&lt;/i&gt;
+            &lt;span class=&quot;text-[var(--gray-text-color)]&quot;&gt; Conakry, Guinée &lt;/span&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;flex items-start&quot;&gt;
+            &lt;i class=&quot;fas fa-phone text-[var(--primary-color)] mt-1 mr-3&quot;&gt;&lt;/i&gt;
+            &lt;a href=&quot;tel:+224YOUR_NUMBER&quot; class=&quot;text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300&quot;&gt;
+              +224 XXX XXX XXX
+            &lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;flex items-start&quot;&gt;
+            &lt;i class=&quot;fas fa-envelope text-[var(--primary-color)] mt-1 mr-3&quot;&gt;&lt;/i&gt;
+            &lt;a href=&quot;mailto:contact@smartservicesgn.com&quot; class=&quot;text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300&quot;&gt;
+              contact@smartservicesgn.com
+            &lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class=&quot;flex items-start&quot;&gt;
+            &lt;i class=&quot;fas fa-clock text-[var(--primary-color)] mt-1 mr-3&quot;&gt;&lt;/i&gt;
+            &lt;span class=&quot;text-[var(--gray-text-color)]&quot;&gt;
+              Lun - Dim: 8h - 20h
+            &lt;/span&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Bottom Bar --&gt;
+    &lt;div class=&quot;border-t border-[var(--accent2-color)] pt-8&quot;&gt;
+      &lt;div class=&quot;flex flex-col md:flex-row justify-between items-center gap-4&quot;&gt;
+        &lt;p class=&quot;text-[var(--gray-text-color)] text-sm text-center md:text-left&quot;&gt;
+          © 2026 Smart Services GN. Tous droits réservés.
+        &lt;/p&gt;
+        &lt;div class=&quot;flex flex-wrap justify-center gap-6 text-sm&quot;&gt;
+          &lt;a href=&quot;/legal&quot; class=&quot;text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300&quot;&gt;
+            Mentions légales
+          &lt;/a&gt;
+          &lt;a href=&quot;/return-policy&quot; class=&quot;text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300&quot;&gt;
+            Politique de retour
+          &lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Floating WhatsApp Button --&gt;
+  &lt;a href=&quot;https://wa.me/224YOUR_NUMBER&quot; target=&quot;_blank&quot; class=&quot;fixed bottom-6 right-6 bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:bg-green-700 transition-all duration-300 hover:scale-110 z-50 group&quot;&gt;
+    &lt;i class=&quot;fab fa-whatsapp text-3xl&quot;&gt;&lt;/i&gt;
+    &lt;span class=&quot;absolute right-full mr-3 bg-[var(--dark-background-color)] text-white px-4 py-2 rounded-lg text-sm font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none&quot;&gt;
+      Discutez avec nous
+    &lt;/span&gt;
+  &lt;/a&gt;
+&lt;/footer&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;script src=&quot;/embed/main.umd.js&quot;&gt;&lt;/script&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;&lt;/html&gt;" style="width: 100%; height: 100%; top: 0px;"></iframe>
+<style>
+  /* 1. On force l'affichage en plein écran sans bordures */
+  iframe, .frame-root, .frame-content {
+    border: none !important;
+    outline: none !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    z-index: 999999;
+  }
+
+  /* 2. On s'assure que rien ne dépasse sur les côtés (anti-bug mobile) */
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
+    width: 100% !important;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* 3. On enlève les contours bleus de sélection du mode édition */
+  .hovered-element, .clicked-element, .clicked-code-section {
+    outline: none !important;
+    border: none !important;
+  }
+</style>
+
+<script>
+  // Ce petit script permet au bouton "Menu" de fonctionner sur téléphone
+  document.addEventListener('DOMContentLoaded', function() {
+    const btn = document.querySelector('[data-landingsite-mobile-menu-toggle]');
+    const menu = document.querySelector('[data-landingsite-mobile-menu]');
+    if (btn && menu) {
+      btn.onclick = function() {
+        menu.classList.toggle('hidden');
+      };
+    }
+  });
+</script>
+<style>
+  /* Supprime le cadre et force le plein écran partout */
+  iframe, .frame-root, .frame-content {
+    border: none !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    margin: 0 !important;
+    z-index: 9999;
+  }
+
+  /* Empêche le site de bouger de gauche à droite sur téléphone */
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
+    width: 100% !important;
+    height: 100% !important;
+    position: fixed; /* Évite les rebonds bizarres sur mobile */
+  }
+
+  /* Cache les outils d'édition qui créent des bordures bleues */
+  .hovered-element, .clicked-element { 
+    outline: none !important; 
+  }
+</style>
+
+<script>
+  (function() {
+    // 1. Force le "zoom" correct sur téléphone
+    var meta = document.createElement('meta');
+    meta.name = "viewport";
+    meta.content = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no";
+    document.getElementsByTagName('head')[0].appendChild(meta);
+
+    // 2. Active le menu "Hamburger" pour le mobile
+    document.addEventListener('click', function(e) {
+      if (e.target.closest('[data-landingsite-mobile-menu-toggle]')) {
+        var menu = document.querySelector('[data-landingsite-mobile-menu]');
+        if (menu) {
+          menu.classList.toggle('hidden');
+          menu.style.display = menu.classList.contains('hidden') ? 'none' : 'block';
+          menu.style.backgroundColor = 'white'; // Assure la visibilité
+        }
+      }
+    });
+
+    // 3. Correction des images trop larges sur mobile
+    var fixImages = function() {
+      var imgs = document.querySelectorAll('img');
+      imgs.forEach(function(img) {
+        img.style.maxWidth = '100%';
+        img.style.height = 'auto';
+      });
+    };
+    window.onload = fixImages;
+  })();
+</script>
