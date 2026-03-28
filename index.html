@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Services GN – Boutique Automobile en Guinée | Produits & Accessoires Automobiles</title>
+  <meta name="description" content="Découvrez Smart Services GN, votre boutique automobile en Guinée spécialisée dans les produits, accessoires, et solutions innovantes pour véhicules. Livraison rapide et service professionnel.">
+  <meta name="language" content="fr">
+  <meta property="og:title" content="Smart Services GN – Boutique Automobile en Guinée">
+  <meta property="og:description" content="Explorez notre gamme de produits automobiles. Livraison rapide et solutions pour votre véhicule.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Smart Services GN – Boutique Automobile en Guinée">
+  <meta name="twitter:description" content="Découvrez des solutions automobiles innovantes, livrées rapidement en Guinée.">
+
+  <!-- External Stylesheets -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header id="global-header" class="header-sticky">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-between py-3">
+        <!-- Logo -->
+        <a href="/" class="flex-shrink-0">
+          <img src="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/8fed5888-1952-4439-d691-a78e67ba3300/publicContain" alt="Smart Services GN" class="h-16 py-1 transition-transform duration-300 hover:scale-105">
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center space-x-6">
+          <a href="#accueil" class="nav-link">Accueil</a>
+          <a href="#a-propos" class="nav-link">À propos de nous</a>
+          <a href="#categories" class="nav-link">Catégories</a>
+          <a href="#nos-produits" class="nav-link">Nos Produits</a>
+          <a href="#livraison" class="nav-link">Livraison</a>
+          <a href="#contact" class="nav-link">Contact</a>
+          <a href="#nos-produits" class="btn-primary">
+            <i class="fas fa-shopping-bag mr-2"></i>Acheter
+          </a>
+        </nav>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-menu-toggle" class="lg:hidden text-gray-800 p-2 focus:outline-none">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <nav id="mobile-menu" class="hidden lg:hidden pb-4">
+        <div class="flex flex-col space-y-2">
+          <a href="#accueil" class="mobile-nav-link">Accueil</a>
+          <a href="#a-propos" class="mobile-nav-link">À propos de nous</a>
+          <a href="#categories" class="mobile-nav-link">Catégories</a>
+          <a href="#nos-produits" class="mobile-nav-link">Nos Produits</a>
+          <a href="#livraison" class="mobile-nav-link">Livraison</a>
+          <a href="#contact" class="mobile-nav-link">Contact</a>
+          <a href="#nos-produits" class="btn-primary w-full text-center mt-2">
+            <i class="fas fa-shopping-bag mr-2"></i>Acheter
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="accueil" class="hero-section">
+      <div class="container mx-auto px-4 py-12 lg:py-16 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-8 items-center">
+          <!-- Left Content -->
+          <div class="text-center lg:text-left">
+            <h1 class="hero-title">
+              Tous vos Produits <span class="text-accent3">Automobiles</span> en un Clic
+            </h1>
+            <p class="hero-subtitle">
+              Entretien, diagnostic, performance, esthétique… Smart Services GN vous propose des solutions automobiles innovantes et abordables.
+            </p>
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+              <a href="#nos-produits" class="btn-primary">
+                <i class="fas fa-eye mr-2"></i>Voir nos Produits
+              </a>
+              <a href="https://wa.me/224622000000" target="_blank" class="btn-whatsapp">
+                <i class="fab fa-whatsapp mr-2 text-xl"></i>Commander via WhatsApp
+              </a>
+            </div>
+            <!-- Trust Badges -->
+            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 mt-6">
+              <div class="flex items-center gap-2 text-gray-400 text-sm">
+                <i class="fas fa-shipping-fast text-accent"></i>
+                <span>Livraison Nationale</span>
+              </div>
+              <div class="flex items-center gap-2 text-gray-400 text-sm">
+                <i class="fas fa-shield-alt text-accent"></i>
+                <span>Produits Garantis</span>
+              </div>
+            </div>
+          </div>
+          <!-- Right Image -->
+          <div class="relative">
+            <div class="relative rounded-xl overflow-hidden shadow-xl">
+              <img src="https://assets.ls-assets.com/provider/istock/2194826911.jpg?w=1200" alt="Mécanicien professionnel au centre de service automobile" class="w-full h-auto">
+              <div class="absolute inset-0 bg-gradient-to-t from-dark-bg to-transparent opacity-40"></div>
+            </div>
+            <!-- Stats Badge -->
+            <div class="absolute -bottom-4 -left-4 bg-white text-gray-800 p-4 rounded-lg shadow-lg">
+              <div class="text-2xl font-bold text-primary">1000+</div>
+              <div class="text-sm">Clients Satisfaits</div>
+            </div>
+            <div class="absolute -top-2 -right-2 bg-accent text-white p-3 rounded-lg shadow-lg">
+              <i class="fas fa-shipping-fast text-xl"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Bottom Wave -->
+      <div class="absolute bottom-0 left-0 right-0 rotate-180">
+        <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto">
+          <path d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" fill="#fbeee6"></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="a-propos" class="section-light">
+      <div class="container mx-auto px-4">
+        <div class="grid lg:grid-cols-2 gap-10 items-center">
+          <!-- Left - Image Side -->
+          <div class="relative">
+            <div class="relative rounded-xl overflow-hidden shadow-lg">
+              <img src="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/db6cd928-71b7-4e82-e3eb-1293272c0700/public?w=1200" alt="Mécanicien guinéen réparant une batterie" class="w-full h-auto">
+            </div>
+            <div class="absolute -bottom-4 -right-4 bg-primary text-white px-4 py-2 rounded-lg shadow-md">
+              <span class="font-bold">5+</span> Années
+            </div>
+          </div>
+          <!-- Right - Content Side -->
+          <div>
+            <h2 class="section-title">
+              À Propos de <span class="text-primary">Smart Services GN</span>
+            </h2>
+            <p class="text-gray-600 mb-6">
+              Smart Services GN est votre destination unique pour tous vos besoins automobiles en Guinée. Nous combinons expertise, qualité et service exceptionnel pour vous offrir une expérience d'achat incomparable.
+            </p>
+            <!-- Benefits -->
+            <div class="grid grid-cols-2 gap-4 mb-6">
+              <div class="flex items-center gap-2">
+                <i class="fas fa-shipping-fast text-primary"></i>
+                <span class="text-sm text-gray-600">Livraison Rapide</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fas fa-shield-alt text-primary"></i>
+                <span class="text-sm text-gray-600">Produits Garantis</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fas fa-headset text-primary"></i>
+                <span class="text-sm text-gray-600">Support 7j/7</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fas fa-tag text-primary"></i>
+                <span class="text-sm text-gray-600">Prix Compétitifs</span>
+              </div>
+            </div>
+            <!-- Stats Grid -->
+            <div class="grid grid-cols-4 gap-4 mb-6">
+              <div class="stat-card">
+                <div class="text-2xl font-bold text-primary">1000+</div>
+                <div class="text-xs text-gray-600">Clients</div>
+              </div>
+              <div class="stat-card">
+                <div class="text-2xl font-bold text-primary">7+</div>
+                <div class="text-xs text-gray-600">Produits</div>
+              </div>
+              <div class="stat-card">
+                <div class="text-2xl font-bold text-primary">50+</div>
+                <div class="text-xs text-gray-600">Avis 5⭐</div>
+              </div>
+              <div class="stat-card">
+                <div class="text-2xl font-bold text-primary">100%</div>
+                <div class="text-xs text-gray-600">Satisfait</div>
+              </div>
+            </div>
+            <!-- Guarantee -->
+            <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+              <div class="flex items-center gap-2 text-green-700">
+                <i class="fas fa-check-circle text-green-500"></i>
+                <span>Produits garantis et livraison rapide partout en Guinée</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS SECTION -->
+    <section id="nos-produits" class="section-white">
+      <div class="container mx-auto px-4">
+        <!-- Section Header -->
+        <div class="text-center mb-10">
+          <h2 class="section-title">Nos Produits <span class="text-primary">Disponibles</span></h2>
+          <p class="text-gray-600 max-w-xl mx-auto">
+            Des produits de haute qualité pour l'entretien et la performance de votre véhicule
+          </p>
+        </div>
+        <!-- Products Grid -->
+        <div id="products-container" class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 mb-8"></div>
+        <!-- CTA Button -->
+        <div class="text-center mt-8">
+          <button onclick="openAllProductsModal()" class="btn-dark">
+            <i class="fas fa-box-open mr-2"></i>Voir Tous nos Produits Disponibles
+          </button>
+          <p class="text-sm text-gray-600 mt-2">Cliquez pour voir tous nos produits disponibles</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ALL PRODUCTS MODAL -->
+    <div id="allProductsModal" class="modal-overlay hidden">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h3 class="font-bold text-lg">
+            <i class="fas fa-box-open mr-2"></i>Tous nos Produits - Smart Services GN
+          </h3>
+          <button onclick="closeAllProductsModal()" class="modal-close">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <!-- Modal Body -->
+        <div id="all-products-container" class="modal-body"></div>
+      </div>
+    </div>
+
+    <!-- ORDER MODAL -->
+    <div id="orderModal" class="modal-overlay hidden">
+      <div class="modal-content max-w-md">
+        <div class="modal-header">
+          <h3 class="font-bold text-lg"><i class="fas fa-shopping-bag mr-2"></i>Commander</h3>
+          <button onclick="closeOrderModal()" class="modal-close">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <form id="orderForm" class="modal-form" onsubmit="submitOrder(event)">
+          <div class="modal-product-info">
+            <p class="text-sm text-gray-600 mb-1">Produit sélectionné</p>
+            <p id="modalProductName" class="font-bold text-gray-800"></p>
+            <p id="modalProductDesc" class="text-sm text-gray-600"></p>
+          </div>
+          <div>
+            <label class="form-label"><i class="fas fa-user mr-2 text-primary"></i>Votre Nom *</label>
+            <input type="text" name="name" required placeholder="Entrez votre nom complet" class="form-input">
+          </div>
+          <div>
+            <label class="form-label"><i class="fas fa-phone mr-2 text-primary"></i>Numéro de Téléphone *</label>
+            <input type="tel" name="phone" required placeholder="+224 6XX XXX XXX" class="form-input">
+          </div>
+          <div>
+            <label class="form-label"><i class="fas fa-map-marker-alt mr-2 text-primary"></i>Ville *</label>
+            <select name="city" required class="form-input">
+              <option value="">Sélectionnez votre ville</option>
+              <option value="Conakry">Conakry</option>
+              <option value="Kindia">Kindia</option>
+              <option value="Labé">Labé</option>
+              <option value="Kankan">Kankan</option>
+              <option value="N'Zérékoré">N'Zérékoré</option>
+              <option value="Fria">Fria</option>
+              <option value="Boké">Boké</option>
+              <option value="Mamou">Mamou</option>
+              <option value="Dubréka">Dubréka</option>
+              <option value="Coyah">Coyah</option>
+              <option value="Autre">Autre ville</option>
+            </select>
+          </div>
+          <div>
+            <label class="form-label"><i class="fas fa-box mr-2 text-primary"></i>Quantité *</label>
+            <div class="flex items-center gap-4">
+              <button type="button" onclick="decreaseQty()" class="qty-btn">
+                <i class="fas fa-minus"></i>
+              </button>
+              <input type="number" name="quantity" id="quantityInput" value="1" min="1" required class="qty-input">
+              <button type="button" onclick="increaseQty()" class="qty-btn">
+                <i class="fas fa-plus"></i>
+              </button>
+            </div>
+          </div>
+          <button type="submit" class="btn-whatsapp w-full py-4 rounded-xl font-bold text-lg">
+            <i class="fab fa-whatsapp text-2xl"></i>Commander via WhatsApp
+          </button>
+          <p class="text-center text-sm text-gray-600"><i class="fas fa-lock mr-1"></i>Vos informations sont sécurisées</p>
+        </form>
+      </div>
+    </div>
+
+    <!-- CATEGORIES SECTION -->
+    <section id="categories" class="section-white">
+      <div class="container mx-auto px-4">
+        <!-- Section Header -->
+        <div class="text-center mb-10">
+          <h2 class="section-title">Catégories de <span class="text-primary">Produits</span></h2>
+          <p class="text-gray-600 max-w-xl mx-auto">Explorez nos catégories pour trouver les produits adaptés à vos besoins</p>
+        </div>
+        <!-- Categories Grid -->
+        <div class="grid md:grid-cols-3 gap-5">
+          <a href="#nos-produits" class="category-card">
+            <div class="flex items-center gap-4">
+              <div class="category-icon bg-blue-100 text-blue-600">
+                <i class="fas fa-laptop-medical"></i>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-semibold text-gray-800">Diagnostics Auto</h3>
+                <p class="text-sm text-gray-600">Scanners OBD2</p>
+              </div>
+              <i class="fas fa-chevron-right text-gray-400 transition-transform"></i>
+            </div>
+          </a>
+          <a href="#nos-produits" class="category-card">
+            <div class="flex items-center gap-4">
+              <div class="category-icon bg-red-100 text-red-600">
+                <i class="fas fa-cogs"></i>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-semibold text-gray-800">Entretien Moteur</h3>
+                <p class="text-sm text-gray-600">Nettoyants, additifs</p>
+              </div>
+              <i class="fas fa-chevron-right text-gray-400 transition-transform"></i>
+            </div>
+          </a>
+          <a href="#nos-produits" class="category-card">
+            <div class="flex items-center gap-4">
+              <div class="category-icon bg-purple-100 text-purple-600">
+                <i class="fas fa-spray-can"></i>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-semibold text-gray-800">Esthétique</h3>
+                <p class="text-sm text-gray-600">Rayures, plastiques</p>
+              </div>
+              <i class="fas fa-chevron-right text-gray-400 transition-transform"></i>
+            </div>
+          </a>
+        </div>
+        <!-- Bottom CTA -->
+        <div class="text-center mt-8">
+          <button onclick="openAllProductsModal()" class="btn-primary">
+            <i class="fas fa-eye mr-2"></i>Voir Tous nos Produits
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW TO ORDER SECTION -->
+    <section id="sc7p2li" class="section-gradient">
+      <div class="container mx-auto px-4 relative z-10">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
+            Commander en <span class="text-primary">3 Étapes Simples</span>
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Obtenez vos produits automobiles en quelques clics, sans complications
+          </p>
+        </div>
+        <!-- Steps Grid -->
+        <div class="grid md:grid-cols-3 gap-8 mb-12">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <div class="step-icon">
+              <i class="fas fa-mouse-pointer"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Choisissez Vos Produits</h3>
+            <p class="text-gray-600">Parcourez notre catalogue et sélectionnez les produits dont vous avez besoin pour votre véhicule.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <div class="step-icon">
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Passez Commande</h3>
+            <p class="text-gray-600">Ajoutez au panier et remplissez le formulaire simple avec vos coordonnées et adresse de livraison.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <div class="step-icon" style="background: linear-gradient(to bottom right, #22c55e, #16a34a);">
+              <i class="fas fa-truck" style="color: white;"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Recevez Rapidement</h3>
+            <p class="text-gray-600">Votre commande est traitée et livrée rapidement à votre adresse à Conakry ou partout en Guinée.</p>
+          </div>
+        </div>
+        <!-- Quick Order CTA -->
+        <div class="cta-box">
+          <div class="grid lg:grid-cols-2 gap-8 items-center">
+            <div>
+              <h3 class="text-2xl sm:text-3xl font-bold text-white mb-4">Besoin d'une Commande Express ?</h3>
+              <p class="text-light-text mb-6 text-lg">
+                Contactez-nous directement sur WhatsApp pour une assistance immédiate et une commande ultra-rapide.
+              </p>
+              <ul class="space-y-3 mb-6">
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-green-400 mr-3 text-xl"></i>
+                  <span>Réponse immédiate en quelques minutes</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-green-400 mr-3 text-xl"></i>
+                  <span>Conseils personnalisés sur les produits</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-green-400 mr-3 text-xl"></i>
+                  <span>Livraison express disponible</span>
+                </li>
+              </ul>
+              <a href="https://wa.me/224622000000" target="_blank" class="btn-whatsapp-large">
+                <i class="fab fa-whatsapp mr-4 text-3xl"></i>
+                <div class="text-left">
+                  <div class="text-sm opacity-90">Commander via</div>
+                  <div>WhatsApp</div>
+                </div>
+              </a>
+              <p class="text-sm text-light-text mt-4 italic">Disponible 7j/7 pour vous servir</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DELIVERY SECTION -->
+    <section id="livraison" class="section-light">
+      <div class="container mx-auto px-4">
+        <div class="grid lg:grid-cols-2 gap-10 items-center">
+          <!-- Left Side - Content -->
+          <div>
+            <h2 class="section-title">
+              Livraison dans <span class="text-primary">Toute la Guinée</span>
+            </h2>
+            <p class="text-gray-600 mb-6">
+              Livraison rapide et sécurisée de vos produits automobiles partout en Guinée, avec un service client disponible 7j/7.
+            </p>
+            <!-- Delivery Info -->
+            <div class="space-y-3 mb-6">
+              <div class="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm">
+                <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600">
+                  <i class="fas fa-shipping-fast"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-800 text-sm">Conakry</h4>
+                  <p class="text-xs text-gray-600">24-48h</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm">
+                <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center text-green-600">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-800 text-sm">Intérieur du pays</h4>
+                  <p class="text-xs text-gray-600">3-5 jours</p>
+                </div>
+              </div>
+            </div>
+            <!-- Contact -->
+            <div id="contact" class="bg-dark-bg rounded-xl p-4 text-white">
+              <h4 class="font-semibold mb-3">Contactez-nous</h4>
+              <div class="flex flex-wrap gap-2">
+                <a href="https://wa.me/224622000000" target="_blank" class="btn-whatsapp-small">
+                  <i class="fab fa-whatsapp mr-1"></i>WhatsApp
+                </a>
+                <a href="https://facebook.com/smartservicesgn" target="_blank" class="btn-social-facebook">
+                  <i class="fab fa-facebook mr-1"></i>Facebook
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Right Side - Image -->
+          <div class="relative">
+            <div class="rounded-xl overflow-hidden shadow-lg">
+              <img src="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/cb3dedd3-6422-47bf-7601-737528950900/public?w=1200" alt="Service van avec technician" class="w-full h-auto">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="global-footer" class="bg-dark-bg text-light-text pt-16 pb-8">
+    <div class="container mx-auto px-4">
+      <!-- Main Footer Content -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <!-- Company Info -->
+        <div>
+          <a href="/" class="inline-block mb-6">
+            <img src="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/8fed5888-1952-4439-d691-a78e67ba3300/publicContain" alt="Smart Services GN" class="h-28 py-2">
+          </a>
+          <p class="text-gray-400 mb-6 leading-relaxed">
+            Votre partenaire de confiance pour tous vos besoins automobiles en Guinée. Produits authentiques, livraison rapide, service exceptionnel.
+          </p>
+          <!-- Social Media -->
+          <div class="flex space-x-4">
+            <a href="https://facebook.com/smartservicesgn" target="_blank" class="social-icon">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://instagram.com/smartservicesgn" target="_blank" class="social-icon">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/224622000000" target="_blank" class="social-icon">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-xl font-bold text-white mb-6">Liens Rapides</h3>
+          <ul class="space-y-3">
+            <li><a href="/" class="footer-link">Accueil</a></li>
+            <li><a href="/about" class="footer-link">À propos de nous</a></li>
+            <li><a href="/categories" class="footer-link">Catégories de Produits</a></li>
+            <li><a href="/shop" class="footer-link">Boutique</a></li>
+            <li><a href="/delivery-information" class="footer-link">Livraison</a></li>
+          </ul>
+        </div>
+        <!-- Support -->
+        <div>
+          <h3 class="text-xl font-bold text-white mb-6">Support</h3>
+          <ul class="space-y-3">
+            <li><a href="#contact" class="footer-link">Contactez-nous</a></li>
+            <li><a href="/return-policy" class="footer-link">Politique de retour</a></li>
+            <li><a href="/legal" class="footer-link">Mentions légales</a></li>
+            <li><a href="/cart" class="footer-link">Panier</a></li>
+          </ul>
+        </div>
+        <!-- Contact Info -->
+        <div>
+          <h3 class="text-xl font-bold text-white mb-6">Contactez-nous</h3>
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt text-primary mt-1 mr-3"></i>
+              <span class="text-gray-400">Conakry, Guinée</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-phone text-primary mt-1 mr-3"></i>
+              <a href="tel:+224622000000" class="text-gray-400 hover:text-primary transition-colors">+224 622 000 000</a>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-envelope text-primary mt-1 mr-3"></i>
+              <a href="mailto:contact@smartservicesgn.com" class="text-gray-400 hover:text-primary transition-colors">contact@smartservicesgn.com</a>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-clock text-primary mt-1 mr-3"></i>
+              <span class="text-gray-400">Lun - Dim: 8h - 20h</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Bottom Bar -->
+      <div class="border-t border-accent2 pt-8">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+          <p class="text-gray-400 text-sm text-center md:text-left">© 2026 Smart Services GN. Tous droits réservés.</p>
+          <div class="flex flex-wrap justify-center gap-6 text-sm">
+            <a href="/legal" class="footer-link">Mentions légales</a>
+            <a href="/return-policy" class="footer-link">Politique de retour</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/224622000000" target="_blank" class="fixed bottom-6 right-6 bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:bg-green-700 transition-all duration-300 hover:scale-110 z-50 group">
+      <i class="fab fa-whatsapp text-3xl"></i>
+      <span class="absolute right-full mr-3 bg-dark-bg text-white px-4 py-2 rounded-lg text-sm font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+        Discutez avec nous
+      </span>
+    </a>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/modal.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
