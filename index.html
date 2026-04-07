@@ -54,11 +54,11 @@
   <style>
   #global-header { height: auto !important; overflow: visible !important; background: white !important; }
   #global-header > div > div { display: flex !important; align-items: center !important; justify-content: space-between !important; width: 100% !important; }
-  #global-header a.flex-shrink-0 { flex-shrink: 1 !important; max-width: 250px !important; }
+  #global-header a.flex-shrink-0 { flex-shrink: 1 !important; max-width: 280px !important; }
   #global-header a.flex-shrink-0 img { 
-    height: 72px !important; 
+    height: 96px !important; 
     width: auto !important; 
-    max-width: 250px !important; 
+    max-width: 280px !important; 
     object-fit: contain !important; 
   }
   #global-header nav.hidden.lg\:flex { 
@@ -66,6 +66,11 @@
     flex-shrink: 0 !important;
     align-items: center !important;
     gap: 24px !important;
+  }
+  /* MOBILE MENU */
+  [data-landingsite-mobile-menu]:not(.hidden) {
+    display: flex !important;
+    flex-direction: column !important;
   }
 </style>
 </head>
@@ -76,7 +81,7 @@
     <div class="flex items-center justify-between py-3">
       <!-- Logo -->
       <a href="/" class="flex-shrink-0">
-        <img src="assets/logo_transparent.png" alt="OC Business Center" class="h-28 transition-transform duration-300 hover:scale-105" data-logo="">
+        <img src="assets/logo_transparent.png" alt="OC Business Center" class="transition-transform duration-300 hover:scale-105" data-logo="" style="height:96px;width:auto;object-fit:contain;">
       </a>
 
       <!-- Desktop Navigation -->
@@ -105,35 +110,37 @@
       </nav>
 
       <!-- Mobile Menu Toggle -->
-      <button data-landingsite-mobile-menu-toggle="" class="lg:hidden text-[var(--dark-text-color)] p-2 focus:outline-none">
-        <i class="fas fa-bars text-2xl"></i>
+      <button data-landingsite-mobile-menu-toggle="" class="lg:hidden text-[var(--dark-text-color)] p-2 focus:outline-none rounded-lg hover:bg-gray-100 transition-colors" aria-label="Menu">
+        <i class="fas fa-bars text-xl"></i>
       </button>
     </div>
 
     <!-- Mobile Navigation -->
-    <nav data-landingsite-mobile-menu="" class="hidden lg:hidden pb-4">
-      <div class="flex flex-col space-y-2">
-        <a href="#accueil" class="text-[var(--dark-text-color)] hover:text-[var(--primary-color)] font-medium py-2 border-b border-gray-100">
-          Accueil
+    <nav data-landingsite-mobile-menu="" class="hidden lg:hidden border-t border-gray-100">
+      <div class="flex flex-col py-2">
+        <a href="#accueil" class="text-[var(--dark-text-color)] hover:text-[var(--primary-color)] hover:bg-orange-50 font-medium px-2 py-3 border-b border-gray-100 transition-colors">
+          <i class="fas fa-home w-5 mr-2 text-[var(--primary-color)]"></i>Accueil
         </a>
-        <a href="#a-propos" class="text-[var(--dark-text-color)] hover:text-[var(--primary-color)] font-medium py-2 border-b border-gray-100">
-          À propos de nous
+        <a href="#a-propos" class="text-[var(--dark-text-color)] hover:text-[var(--primary-color)] hover:bg-orange-50 font-medium px-2 py-3 border-b border-gray-100 transition-colors">
+          <i class="fas fa-info-circle w-5 mr-2 text-[var(--primary-color)]"></i>À propos de nous
         </a>
-        <a href="#categories" class="text-[var(--dark-text-color)] hover:text-[var(--primary-color)] font-medium py-2 border-b border-gray-100">
-          Catégories
+        <a href="#categories" class="text-[var(--dark-text-color)] hover:text-[var(--primary-color)] hover:bg-orange-50 font-medium px-2 py-3 border-b border-gray-100 transition-colors">
+          <i class="fas fa-th-large w-5 mr-2 text-[var(--primary-color)]"></i>Catégories
         </a>
-        <a href="#nos-produits" class="text-[var(--dark-text-color)] hover:text-[var(--primary-color)] font-medium py-2 border-b border-gray-100">
-          Nos Produits
+        <a href="#nos-produits" class="text-[var(--dark-text-color)] hover:text-[var(--primary-color)] hover:bg-orange-50 font-medium px-2 py-3 border-b border-gray-100 transition-colors">
+          <i class="fas fa-box w-5 mr-2 text-[var(--primary-color)]"></i>Nos Produits
         </a>
-        <a href="#livraison" class="text-[var(--dark-text-color)] hover:text-[var(--primary-color)] font-medium py-2 border-b border-gray-100">
-          Livraison
+        <a href="#livraison" class="text-[var(--dark-text-color)] hover:text-[var(--primary-color)] hover:bg-orange-50 font-medium px-2 py-3 border-b border-gray-100 transition-colors">
+          <i class="fas fa-truck w-5 mr-2 text-[var(--primary-color)]"></i>Livraison
         </a>
-        <a href="#contact" class="text-[var(--dark-text-color)] hover:text-[var(--primary-color)] font-medium py-2 border-b border-gray-100">
-          Contact
+        <a href="#contact" class="text-[var(--dark-text-color)] hover:text-[var(--primary-color)] hover:bg-orange-50 font-medium px-2 py-3 border-b border-gray-100 transition-colors">
+          <i class="fas fa-envelope w-5 mr-2 text-[var(--primary-color)]"></i>Contact
         </a>
-        <a href="#nos-produits" class="bg-[var(--primary-color)] text-white px-6 py-3 rounded-lg font-semibold text-center mt-2">
-          <i class="fas fa-shopping-bag mr-2"></i>Acheter
-        </a>
+        <div class="px-2 pt-3 pb-2">
+          <a href="#nos-produits" class="bg-[var(--primary-color)] text-white px-6 py-3 rounded-lg font-semibold text-center block hover:bg-[var(--primary-button-hover-bg-color)] transition-colors">
+            <i class="fas fa-shopping-bag mr-2"></i>Commander maintenant
+          </a>
+        </div>
       </div>
     </nav>
   </div>
@@ -1184,112 +1191,103 @@
 
 </main>
 
-<footer id="global-footer" class="code-section bg-[var(--dark-background-color)] text-[var(--light-text-color)] pt-16 pb-8">
+<footer id="global-footer" class="code-section bg-[var(--dark-background-color)] text-[var(--light-text-color)] pt-10 pb-6">
   <div class="container mx-auto px-4">
     <!-- Main Footer Content -->
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+    <div class="grid md:grid-cols-3 gap-8 mb-8">
       <!-- Company Info -->
       <div>
-        <a href="/" class="inline-block mb-6">
-          <img src="assets/logo_transparent.png" alt="OC Business Center" class="h-20 py-2" data-logo="">
+        <a href="/" class="inline-block mb-4">
+          <img src="assets/logo_transparent.png" alt="OC Business Center" class="h-14 w-auto object-contain" data-logo="">
         </a>
-        <p class="text-[var(--gray-text-color)] mb-6 leading-relaxed">
-          Votre partenaire de confiance pour tous vos besoins en Automobile, Immobilier, Logistique et Formations en Guinée. Excellence et intégrité au service de vos ambitions.
+        <p class="text-[var(--gray-text-color)] mb-4 leading-relaxed text-sm">
+          Votre partenaire de confiance pour tous vos besoins en Automobile, Immobilier, Logistique et Formations en Guinée.
         </p>
         <!-- Social Media -->
-        <div class="flex space-x-4">
-          <a href="https://web.facebook.com/profile.php?id=61585298978266" target="_blank" class="w-10 h-10 bg-[var(--accent2-color)] rounded-lg flex items-center justify-center text-white hover:bg-[var(--primary-color)] transition-colors duration-300">
-            <i class="fab fa-facebook-f"></i>
+        <div class="flex space-x-3">
+          <a href="https://web.facebook.com/profile.php?id=61585298978266" target="_blank" class="w-9 h-9 bg-[var(--accent2-color)] rounded-lg flex items-center justify-center text-white hover:bg-[var(--primary-color)] transition-colors duration-300">
+            <i class="fab fa-facebook-f text-sm"></i>
           </a>
-          <a href="https://instagram.com/smartservicesgn" target="_blank" class="w-10 h-10 bg-[var(--accent2-color)] rounded-lg flex items-center justify-center text-white hover:bg-[var(--primary-color)] transition-colors duration-300">
-            <i class="fab fa-instagram"></i>
+          <a href="https://instagram.com/smartservicesgn" target="_blank" class="w-9 h-9 bg-[var(--accent2-color)] rounded-lg flex items-center justify-center text-white hover:bg-[var(--primary-color)] transition-colors duration-300">
+            <i class="fab fa-instagram text-sm"></i>
           </a>
-          <a href="https://wa.me/224620018830" target="_blank" class="w-10 h-10 bg-[var(--accent2-color)] rounded-lg flex items-center justify-center text-white hover:bg-green-600 transition-colors duration-300">
-            <i class="fab fa-whatsapp"></i>
+          <a href="https://wa.me/224620018830" target="_blank" class="w-9 h-9 bg-[var(--accent2-color)] rounded-lg flex items-center justify-center text-white hover:bg-green-600 transition-colors duration-300">
+            <i class="fab fa-whatsapp text-sm"></i>
           </a>
         </div>
       </div>
 
       <!-- Quick Links -->
       <div>
-        <h3 class="font-[var(--font-family-heading)] text-xl font-bold text-white mb-6">
+        <h3 class="font-[var(--font-family-heading)] text-base font-bold text-white mb-4">
           Liens Rapides
         </h3>
-        <ul class="space-y-3">
+        <ul class="space-y-2">
           <li>
-            <a href="/" class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 flex items-center">
-              <i class="fas fa-chevron-right text-xs mr-2"></i>
-              Accueil
+            <a href="#accueil" class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 flex items-center text-sm">
+              <i class="fas fa-chevron-right text-xs mr-2"></i>Accueil
             </a>
           </li>
           <li>
-            <a href="/about" class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 flex items-center">
-              <i class="fas fa-chevron-right text-xs mr-2"></i>
-              À propos de nous
+            <a href="#a-propos" class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 flex items-center text-sm">
+              <i class="fas fa-chevron-right text-xs mr-2"></i>À propos de nous
             </a>
           </li>
           <li>
-            <a href="/categories" class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 flex items-center">
-              <i class="fas fa-chevron-right text-xs mr-2"></i>
-              Catégories de Produits
+            <a href="#categories" class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 flex items-center text-sm">
+              <i class="fas fa-chevron-right text-xs mr-2"></i>Catégories de Produits
             </a>
           </li>
           <li>
-            <a href="/shop" class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 flex items-center">
-              <i class="fas fa-chevron-right text-xs mr-2"></i>
-              Boutique
+            <a href="#nos-produits" class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 flex items-center text-sm">
+              <i class="fas fa-chevron-right text-xs mr-2"></i>Nos Produits
             </a>
           </li>
           <li>
-            <a href="/delivery-information" class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 flex items-center">
-              <i class="fas fa-chevron-right text-xs mr-2"></i>
-              Livraison
+            <a href="#livraison" class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 flex items-center text-sm">
+              <i class="fas fa-chevron-right text-xs mr-2"></i>Livraison
             </a>
           </li>
         </ul>
       </div>
 
-      <!-- Support Section Removed By User Request -->
-
       <!-- Contact Info -->
       <div>
-        <h3 class="font-[var(--font-family-heading)] text-xl font-bold text-white mb-6">
+        <h3 class="font-[var(--font-family-heading)] text-base font-bold text-white mb-4">
           Contactez-nous
         </h3>
-        <ul class="space-y-4">
+        <ul class="space-y-3">
           <li class="flex items-start">
-            <i class="fas fa-map-marker-alt text-[var(--primary-color)] mt-1 mr-3"></i>
-            <span class="text-[var(--gray-text-color)]"> Conakry, Guinée </span>
+            <i class="fas fa-map-marker-alt text-[var(--primary-color)] mt-0.5 mr-3 text-sm"></i>
+            <span class="text-[var(--gray-text-color)] text-sm">Conakry, Guinée</span>
           </li>
           <li class="flex items-start">
-            <i class="fas fa-phone text-[var(--primary-color)] mt-1 mr-3"></i>
-            <a href="tel:+224620018830" class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300">
+            <i class="fas fa-phone text-[var(--primary-color)] mt-0.5 mr-3 text-sm"></i>
+            <a href="tel:+224620018830" class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 text-sm">
               +224 620 01 88 30
             </a>
           </li>
           <li class="flex items-start">
-            <i class="fas fa-envelope text-[var(--primary-color)] mt-1 mr-3"></i>
-            <a href="mailto:contact@ocbusinesscenter.com" class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300">
+            <i class="fas fa-envelope text-[var(--primary-color)] mt-0.5 mr-3 text-sm"></i>
+            <a href="mailto:contact@ocbusinesscenter.com" class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300 text-sm break-all">
               contact@ocbusinesscenter.com
             </a>
           </li>
           <li class="flex items-start">
-            <i class="fas fa-clock text-[var(--primary-color)] mt-1 mr-3"></i>
-            <span class="text-[var(--gray-text-color)]">
-              Lun - Dim: 8h - 20h
-            </span>
+            <i class="fas fa-clock text-[var(--primary-color)] mt-0.5 mr-3 text-sm"></i>
+            <span class="text-[var(--gray-text-color)] text-sm">Lun - Dim : 8h - 20h</span>
           </li>
         </ul>
       </div>
     </div>
 
     <!-- Bottom Bar -->
-    <div class="border-t border-[var(--accent2-color)] pt-8">
-      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-        <p class="text-[var(--gray-text-color)] text-sm text-center md:text-left">
+    <div class="border-t border-[var(--accent2-color)] pt-5">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-3">
+        <p class="text-[var(--gray-text-color)] text-xs text-center md:text-left">
           © 2026 OC Business Center. Tous droits réservés.
         </p>
-        <div class="flex flex-wrap justify-center gap-6 text-sm">
+        <div class="flex flex-wrap justify-center gap-5 text-xs">
           <a href="/legal" class="text-[var(--gray-text-color)] hover:text-[var(--primary-color)] transition-colors duration-300">
             Mentions légales
           </a>
