@@ -1,0 +1,13 @@
+﻿c228ae0 Ô£¿ HEADER: Menu hamburger fonctionnel, fixed sticky, logo responsive 48/64px, smooth scroll vanilla JS
+28af49e ­ƒöÆ LOCKDOWN: Site compl├¿tement fig├® horizontalement - 100vw strict sur html/body/main/section, overflow-x:hidden partout, viewport ajust├®
+6580955 ­ƒöº FIX FINAL: Remplac├® container par w-full, logo 60px max, 100vw overflow-x hidden partout
+9831233 ­ƒöº CRITICAL FIX: Correction du d├®bordement horizontal mobile - Overflow-x hidden, logo limit├® 80px max
+3f52de8 ­ƒöº FIX: Header drastiquement optimis├® - Logo h-9, espaces r├®duits, pas de d├®bordement
+8a5a8ca ­ƒöº FIX: Header optimis├® - Logo r├®duit (h-12) et CTAs ajust├®s pour meilleure mise en page
+834e956 ­ƒÄ¿ DESIGN: Header & Footer adapt├®s ├á l'ancienne version
+736dc9b ­ƒÄ¿ DESIGN: Restauration du header et footer (anciennes versions)
+5547a28 ­ƒöÇ Merge: Int├®gration de la refonte - Structure optimis├®e
+e65d91d ÔÖ╗´©Å REFACTOR: Structure optimis├®e - S├®paration HTML/CSS/JS
+21f4459 Update print statement from 'Hello' to 'Goodbye'
+757c262 Update print statement from 'Hello' to 'Goodbye'
+e264c03 Add files via upload

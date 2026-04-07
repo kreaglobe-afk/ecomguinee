@@ -129,11 +129,32 @@ function submitOrder(event) {
   const message = `*Nouvelle Commande OC Business Center* 🛒\n\n*Produit:* ${product}\n*Quantité:* ${quantity}\n${priceText}\n\n*Informations Client:*\n*Nom:* ${name}\n*Téléphone:* ${phone}\n*Ville:* ${city}\n*Quartier:* ${quartier}`;
   
   // Format WhatsApp number
-  const whatsappNumber = "224620018830"; // Using the previous manager number
+  const whatsappNumber = "224620018830"; 
   const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
   window.open(whatsappURL, '_blank');
   
   closeOrderModal();
+}
+
+// SUBMIT CONTACT VIA WHATSAPP
+function submitContactWhatsApp(event) {
+  event.preventDefault();
+  
+  const form = event.target;
+  const name = form.querySelector('input[name="name"]').value;
+  const contact = form.querySelector('input[name="contact"]').value;
+  const subject = form.querySelector('select[name="subject"]').value;
+  const messageBody = form.querySelector('textarea[name="message"]').value;
+  
+  const whatsappNumber = "224620018830";
+  
+  const text = `*Nouveau Message - OC Business Center* ✉️\n\n*Expéditeur:* ${name}\n*Contact:* ${contact}\n*Sujet:* ${subject}\n\n*Message:* \n${messageBody}`;
+  
+  const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+  window.open(whatsappURL, '_blank');
+  
+  form.reset();
+  alert("Merci ! Votre message a été préparé pour WhatsApp.");
 }
 
 // CLOSE MODAL ON OUTSIDE CLICK
