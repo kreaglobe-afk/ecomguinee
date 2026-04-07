@@ -2,8 +2,8 @@
 
 // MOBILE MENU TOGGLE
 document.addEventListener('DOMContentLoaded', () => {
-  const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileMenuToggle = document.querySelector('[data-landingsite-mobile-menu-toggle]') || document.getElementById('mobile-menu-toggle');
+  const mobileMenu = document.querySelector('[data-landingsite-mobile-menu]') || document.getElementById('mobile-menu');
   
   if (mobileMenuToggle && mobileMenu) {
     mobileMenuToggle.addEventListener('click', () => {
