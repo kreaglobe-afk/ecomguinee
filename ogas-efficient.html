@@ -112,14 +112,18 @@
         </div>
 
         <form id="orderForm" class="space-y-5">
-          <!-- Select Offre -->
+          <!-- Quantité -->
           <div>
-            <label class="block text-xs font-bold text-gray-700 uppercase mb-2"><i class="fas fa-gift text-brand-primary mr-1"></i> Choisissez votre offre</label>
-            <select id="offerSelect" class="w-full bg-white border-2 border-gray-300 rounded-lg py-3 px-4 text-brand-dark font-bold focus:border-brand-primary focus:ring-0 outline-none appearance-none cursor-pointer">
-              <option value="1">1x OGAS Efficient - 250 000 GNF</option>
-              <option value="2">2x OGAS Efficient (Pack Duo) - 480 000 GNF</option>
-              <option value="3">3x OGAS Efficient (Pack Pro) - 700 000 GNF</option>
-            </select>
+            <label class="block text-xs font-bold text-gray-700 uppercase mb-2"><i class="fas fa-box text-brand-primary mr-1"></i> Quantité</label>
+            <div class="flex items-center gap-4 justify-center">
+              <button type="button" onclick="updateQty(-1)" class="w-12 h-12 bg-white border-2 border-gray-300 rounded-xl flex items-center justify-center text-brand-primary font-bold text-xl hover:bg-brand-primary hover:text-white transition-colors">
+                <i class="fas fa-minus"></i>
+              </button>
+              <input type="number" id="userQuantity" value="1" min="1" readonly class="w-20 bg-white border-2 border-gray-300 rounded-xl py-2 text-center text-brand-dark font-black text-xl outline-none">
+              <button type="button" onclick="updateQty(1)" class="w-12 h-12 bg-white border-2 border-gray-300 rounded-xl flex items-center justify-center text-brand-primary font-bold text-xl hover:bg-brand-primary hover:text-white transition-colors">
+                <i class="fas fa-plus"></i>
+              </button>
+            </div>
           </div>
 
           <!-- Nom -->
@@ -141,9 +145,9 @@
           </div>
 
           <!-- Montant dynamique -->
-          <div class="bg-red-50 border border-red-100 rounded-lg p-4 text-center mt-6">
-            <p class="text-sm font-bold text-gray-700 uppercase mb-1">Montant à payer à la livraison :</p>
-            <p id="totalPriceDisplay" class="text-2xl font-black text-red-600">250 000 GNF</p>
+          <div id="priceDisplayContainer" class="bg-red-50 border border-red-100 rounded-lg p-4 mt-6">
+            <p class="text-sm font-bold text-gray-700 uppercase mb-1 text-center">Montant à payer à la livraison :</p>
+            <p id="totalPriceDisplay" class="text-2xl font-black text-red-600 text-center">250 000 GNF</p>
           </div>
 
           <!-- Bouton Confirmer -->
@@ -366,48 +370,143 @@
     </a>
   </div>
 
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast" class="fixed top-4 right-4 z-[9999] bg-white border-l-4 border-green-500 shadow-xl rounded-lg p-4 text-sm font-bold text-gray-800 flex items-center gap-3 transition-all duration-300 transform translate-x-full opacity-0">
+    <i class="fas fa-check-circle text-green-500 text-xl"></i>
+    <span id="toastMessage">Commande enregistrée !</span>
+  </div>
+
   <script>
-    // Gestion dynamique du prix selon l'offre choisie
-    const offerSelect = document.getElementById('offerSelect');
-    const totalPriceDisplay = document.getElementById('totalPriceDisplay');
-    
-    // Prix de base
+    const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbz5u8YnerZ0gfW6T6S3FWLNCi8W5Mqc8paPRCCSOmQEWofENtNEzxJJiUthFH-i1ody/exec";
     const basePrice = 250000;
-    const prices = {
-      "1": "250 000 GNF",
-      "2": "480 000 GNF",
-      "3": "700 000 GNF"
-    };
+    let currentQuantity = 1;
 
-    offerSelect.addEventListener('change', function() {
-      totalPriceDisplay.textContent = prices[this.value];
-    });
+    function formatPrice(amount) {
+      return amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    }
 
-    // Envoi de la commande via WhatsApp
+    function updateQty(change) {
+      const qtyInput = document.getElementById('userQuantity');
+      let newQty = parseInt(qtyInput.value) + change;
+      if (newQty < 1) newQty = 1;
+      
+      qtyInput.value = newQty;
+      currentQuantity = newQty;
+      
+      updatePriceDisplay();
+    }
+
+    function updatePriceDisplay() {
+      let discountPercent = 0;
+      if (currentQuantity === 2) discountPercent = 15;
+      else if (currentQuantity === 3) discountPercent = 20;
+      else if (currentQuantity >= 4) discountPercent = 25;
+      
+      const subtotal = basePrice * currentQuantity;
+      const discountAmount = Math.floor(subtotal * (discountPercent / 100));
+      const finalTotal = subtotal - discountAmount;
+      
+      const priceDisplay = document.getElementById('priceDisplayContainer');
+      
+      if (discountPercent > 0) {
+        priceDisplay.innerHTML = `
+          <div class="flex justify-between items-center text-sm text-gray-600 mb-1">
+            <span>Sous-total (${currentQuantity} pcs) :</span>
+            <span class="line-through">${formatPrice(subtotal)} GNF</span>
+          </div>
+          <div class="flex justify-between items-center text-sm text-green-600 font-bold mb-2">
+            <span>Réduction (-${discountPercent}%) :</span>
+            <span>-${formatPrice(discountAmount)} GNF</span>
+          </div>
+          <div class="flex justify-between items-center font-black text-xl text-red-600 mt-2 pt-2 border-t border-red-200">
+            <span>Total à payer :</span>
+            <span>${formatPrice(finalTotal)} GNF</span>
+          </div>
+        `;
+      } else {
+        priceDisplay.innerHTML = `
+          <p class="text-sm font-bold text-gray-700 uppercase mb-1 text-center">Montant à payer à la livraison :</p>
+          <p id="totalPriceDisplay" class="text-3xl font-black text-red-600 text-center">${formatPrice(finalTotal)} GNF</p>
+        `;
+      }
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      document.getElementById('toastMessage').textContent = message;
+      toast.classList.remove('translate-x-full', 'opacity-0');
+      
+      setTimeout(() => {
+        toast.classList.add('translate-x-full', 'opacity-0');
+      }, 3000);
+    }
+
+    // Envoi de la commande
     function sendWhatsAppOrder() {
       const name = document.getElementById('userName').value.trim();
       const phone = document.getElementById('userPhone').value.trim();
       const city = document.getElementById('userCity').value.trim();
-      const offerId = offerSelect.value;
-      const offerText = offerSelect.options[offerSelect.selectedIndex].text;
       
       if (!name || !phone || !city) {
         alert("Veuillez remplir tous les champs du formulaire.");
         return;
       }
+
+      // Calcul prix et reduc
+      let discountPercent = 0;
+      if (currentQuantity === 2) discountPercent = 15;
+      else if (currentQuantity === 3) discountPercent = 20;
+      else if (currentQuantity >= 4) discountPercent = 25;
       
-      // Formatage du message
-      let message = "📦 *NOUVELLE COMMANDE - OGAS EFFICIENT*\n\n";
-      message += "👤 Nom : " + name + "\n";
-      message += "📞 Tél : " + phone + "\n";
-      message += "📍 Ville : " + city + "\n";
-      message += "🛍️ Offre : " + offerText + "\n\n";
-      message += "Merci de me contacter pour la livraison.";
+      const subtotal = basePrice * currentQuantity;
+      const discountAmount = Math.floor(subtotal * (discountPercent / 100));
+      const finalTotal = subtotal - discountAmount;
+
+      // 1. Enregistrement Google Sheets
+      const orderData = {
+        name: name,
+        phone: phone,
+        city: city,
+        quartier: "Non spécifié",
+        product: "OGAS Efficient – Additif Moteur Haute Performance",
+        quantity: currentQuantity,
+        price: basePrice,
+        total: finalTotal
+      };
+
+      fetch(GOOGLE_SHEET_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(orderData)
+      }).catch(() => {});
+
+      showToast("Commande enregistrée ! Redirection vers WhatsApp...");
+
+      // 2. Formatage du message WhatsApp
+      let priceText = `*Prix Unitaire:* ${formatPrice(basePrice)} GNF\n`;
+      if (discountPercent > 0) {
+        priceText += `*Sous-total:* ~${formatPrice(subtotal)} GNF~\n`;
+        priceText += `*Réduction (-${discountPercent}%):* -${formatPrice(discountAmount)} GNF\n`;
+      }
+      priceText += `*Total Fixé:* ${formatPrice(finalTotal)} GNF`;
+      
+      let message = `*Nouvelle Commande OC Business Center* 🚀\n\n`;
+      message += `*Produit:* OGAS Efficient\n`;
+      message += `*Quantité:* ${currentQuantity}\n`;
+      message += `${priceText}\n\n`;
+      message += `*Informations Client:*\n`;
+      message += `*Nom:* ${name}\n`;
+      message += `*Tél:* ${phone}\n`;
+      message += `*Ville / Quartier:* ${city}\n\n`;
+      message += `Merci de me contacter pour la livraison.`;
       
       const whatsappNumber = "224620018830";
       const whatsappUrl = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(message);
       
-      window.open(whatsappUrl, '_blank');
+      setTimeout(() => {
+        window.open(whatsappUrl, '_blank');
+      }, 1500);
     }
   </script>
 </body>
