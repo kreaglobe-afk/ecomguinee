@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OGAS Efficient - Additif Moteur | OC Business Center</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Tailwind Config & Custom CSS -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              primary: '#d84315', // Orange/Rouge OCBC
+              secondary: '#ff5722',
+              dark: '#121212',
+              light: '#fbeee6',
+              success: '#28a745', // Vert conversion
+            }
+          },
+          fontFamily: {
+            heading: ['Montserrat', 'sans-serif'],
+            body: ['Open Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Open Sans', sans-serif; background-color: #f9fafb; color: #212121; }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
+    
+    .text-shadow-sm { text-shadow: 1px 1px 2px rgba(0,0,0,0.5); }
+    
+    /* Animation flèche */
+    @keyframes bounce-right {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(5px); }
+    }
+    .animate-bounce-right { animation: bounce-right 1s infinite; }
+  </style>
+</head>
+<body class="pb-24 md:pb-0">
+
+  <!-- [1] BARRE D'ANNONCE (sticky top) -->
+  <div class="sticky top-0 z-50 bg-[#FFCC00] text-black text-center py-3 px-4 shadow-md font-heading font-extrabold text-sm md:text-base tracking-wide uppercase">
+    Paiement A La Réception En Guinée !
+  </div>
+
+  <!-- [2] SECTION HERO -->
+  <section class="bg-white pt-6 pb-8">
+    <div class="container mx-auto px-4 max-w-xl">
+      
+      <!-- Titre produit -->
+      <div class="mb-4">
+        <h1 class="text-3xl md:text-4xl font-heading font-black text-brand-dark tracking-tight">
+          OGAS Efficient
+        </h1>
+      </div>
+
+      <!-- Image Hero -->
+      <div class="relative rounded-xl overflow-hidden shadow-lg bg-gray-100 border-2 border-gray-100 mb-6">
+        <img src="assets/ogas-hero-main.png" alt="OGAS Efficient - Additif moteur haute performance" class="w-full h-auto object-cover">
+      </div>
+
+      <!-- Bouton CTA Hero -->
+      <div class="text-center">
+        <a href="#commande" class="block w-full bg-[#00A651] text-white font-heading font-black uppercase text-xl py-4 px-8 rounded-lg shadow-md hover:bg-green-700 active:scale-95 transition-all">
+          COMMANDER ►
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- [3] SECTION PRIX + FORMULAIRE DE COMMANDE -->
+  <section id="commande" class="bg-gray-50 py-12">
+    <div class="container mx-auto px-4 max-w-lg">
+      
+      <!-- Prix -->
+      <div class="bg-white rounded-t-2xl shadow-lg p-6 text-center border-t-4 border-brand-primary relative mt-4">
+        <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-red-600 text-white font-bold px-4 py-1.5 rounded-full text-sm whitespace-nowrap shadow-md uppercase tracking-wider">
+          Offre Valable -16%
+        </div>
+        
+        <p class="text-gray-400 font-semibold text-lg line-through mt-2 mb-1">Tarif Base: 300 000 GNF</p>
+        <div class="text-5xl font-heading font-black text-red-600 tracking-tight">250 000 <span class="text-2xl">GNF</span></div>
+        
+        <!-- Encadré confiance -->
+        <div class="mt-5 bg-teal-50 border border-teal-200 text-teal-800 p-3 rounded-lg flex items-center justify-center gap-3 font-semibold text-sm">
+          <i class="fas fa-box-open text-xl"></i>
+          Ouvrir et vérifier le colis avant de payer
+        </div>
+      </div>
+
+      <!-- Formulaire -->
+      <div class="bg-[#fffbf0] rounded-b-2xl shadow-lg border-2 border-yellow-500 p-6 sm:p-8">
+        <div class="text-center mb-6">
+          <h2 class="text-2xl font-heading font-black text-brand-primary uppercase">Inscription de Commande</h2>
+          <p class="text-red-600 font-bold text-sm mt-1 animate-pulse">Remplissez vite avant la rupture de stock !</p>
+        </div>
+
+        <form id="orderForm" class="space-y-5">
+          <!-- Select Offre -->
+          <div>
+            <label class="block text-xs font-bold text-gray-700 uppercase mb-2"><i class="fas fa-gift text-brand-primary mr-1"></i> Choisissez votre offre</label>
+            <select id="offerSelect" class="w-full bg-white border-2 border-gray-300 rounded-lg py-3 px-4 text-brand-dark font-bold focus:border-brand-primary focus:ring-0 outline-none appearance-none cursor-pointer">
+              <option value="1">1x OGAS Efficient - 250 000 GNF</option>
+              <option value="2">2x OGAS Efficient (Pack Duo) - 480 000 GNF</option>
+              <option value="3">3x OGAS Efficient (Pack Pro) - 700 000 GNF</option>
+            </select>
+          </div>
+
+          <!-- Nom -->
+          <div>
+            <label class="block text-xs font-bold text-gray-700 uppercase mb-2"><i class="fas fa-user text-brand-primary mr-1"></i> Prénom et Nom</label>
+            <input type="text" id="userName" required placeholder="Ex: Amadou Diallo" class="w-full bg-white border-2 border-gray-300 rounded-lg py-3 px-4 text-brand-dark focus:border-brand-primary focus:ring-0 outline-none">
+          </div>
+
+          <!-- Téléphone -->
+          <div>
+            <label class="block text-xs font-bold text-gray-700 uppercase mb-2"><i class="fas fa-phone-alt text-brand-primary mr-1"></i> Numéro de Téléphone</label>
+            <input type="tel" id="userPhone" required placeholder="Numéro où vous joindre" class="w-full bg-white border-2 border-gray-300 rounded-lg py-3 px-4 text-brand-dark focus:border-brand-primary focus:ring-0 outline-none">
+          </div>
+
+          <!-- Ville -->
+          <div>
+            <label class="block text-xs font-bold text-gray-700 uppercase mb-2"><i class="fas fa-map-marker-alt text-brand-primary mr-1"></i> Ville / Quartier</label>
+            <input type="text" id="userCity" required placeholder="Ex: Conakry, Kaloum" class="w-full bg-white border-2 border-gray-300 rounded-lg py-3 px-4 text-brand-dark focus:border-brand-primary focus:ring-0 outline-none">
+          </div>
+
+          <!-- Montant dynamique -->
+          <div class="bg-red-50 border border-red-100 rounded-lg p-4 text-center mt-6">
+            <p class="text-sm font-bold text-gray-700 uppercase mb-1">Montant à payer à la livraison :</p>
+            <p id="totalPriceDisplay" class="text-2xl font-black text-red-600">250 000 GNF</p>
+          </div>
+
+          <!-- Bouton Confirmer -->
+          <button type="button" onclick="sendWhatsAppOrder()" class="w-full bg-brand-success text-white font-heading font-bold uppercase text-lg py-4 rounded-lg shadow-md hover:bg-green-600 transition-colors mt-2">
+            CONFIRMER LA COMMANDE
+          </button>
+          
+          <p class="text-center text-green-700 font-bold text-xs mt-3">
+            <i class="fas fa-check"></i> Garantie satisfait ou remboursé
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- [4] SUPPORT + AVANT/APRÈS -->
+  <section class="py-12 bg-white">
+    <div class="container mx-auto px-4 max-w-4xl text-center">
+      
+      <!-- Support WhatsApp -->
+      <div class="mb-12">
+        <span class="inline-block bg-gray-100 text-gray-600 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">Centre Assistance Rapide</span>
+        <br>
+        <a href="https://wa.me/224620018830" target="_blank" class="inline-flex items-center gap-2 bg-[#25D366] text-white font-bold py-3 px-6 rounded-full hover:bg-green-600 transition-colors shadow-md">
+          <i class="fab fa-whatsapp text-2xl"></i> Contacter par WhatsApp
+        </a>
+      </div>
+
+      <!-- Avant/Après -->
+      <h2 class="text-3xl md:text-4xl font-heading font-black text-brand-dark mb-8">Résultats en <span class="text-brand-primary">quelques secondes</span></h2>
+      
+      <div class="relative rounded-2xl overflow-hidden shadow-xl mb-6 bg-gray-900 border border-gray-200">
+        <div class="flex flex-col md:flex-row h-full">
+          <!-- Avant -->
+          <div class="w-full md:w-1/2 bg-blue-900 relative">
+            <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&q=80" alt="Avant - Problème moteur" class="w-full h-full object-cover opacity-80 mix-blend-overlay">
+            <div class="absolute inset-0 flex flex-col items-center justify-center p-6 bg-blue-900/40">
+              <span class="bg-red-600 text-white font-black text-xl md:text-3xl px-4 py-1 rotate-[-5deg] mb-4 shadow-lg border-2 border-white">AVANT</span>
+              <p class="text-white font-bold text-center text-shadow-sm">Fumée noire, Bruits métalliques, Perte de puissance</p>
+            </div>
+          </div>
+          
+          <!-- Après -->
+          <div class="w-full md:w-1/2 bg-yellow-600 relative">
+            <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=800&q=80" alt="Après - Versement produit" class="w-full h-[300px] md:h-full object-cover">
+            <div class="absolute inset-0 flex flex-col items-center justify-center p-6 bg-yellow-900/20">
+              <span class="bg-green-500 text-white font-black text-xl md:text-3xl px-4 py-1 rotate-[5deg] mb-4 shadow-lg border-2 border-white">APRÈS</span>
+              <p class="text-white font-bold text-center text-shadow-sm">Moteur silencieux, Puissance retrouvée, Protection totale</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flèche transition -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-full w-12 h-12 md:w-16 md:h-16 flex items-center justify-center shadow-2xl z-10 hidden md:flex border-4 border-gray-100">
+          <i class="fas fa-arrow-right text-brand-primary text-xl md:text-2xl"></i>
+        </div>
+      </div>
+
+      <!-- Badges Features -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+        <div class="bg-gray-50 border border-gray-200 py-2 px-3 rounded-lg font-bold text-xs md:text-sm text-gray-700 shadow-sm"><i class="fas fa-bolt text-yellow-500 mr-1"></i> Action Rapide</div>
+        <div class="bg-gray-50 border border-gray-200 py-2 px-3 rounded-lg font-bold text-xs md:text-sm text-gray-700 shadow-sm"><i class="fas fa-eye text-blue-500 mr-1"></i> Effet Immédiat</div>
+        <div class="bg-gray-50 border border-gray-200 py-2 px-3 rounded-lg font-bold text-xs md:text-sm text-gray-700 shadow-sm"><i class="fas fa-medal text-brand-primary mr-1"></i> Qualité Intense</div>
+        <div class="bg-gray-50 border border-gray-200 py-2 px-3 rounded-lg font-bold text-xs md:text-sm text-gray-700 shadow-sm"><i class="fas fa-hand-sparkles text-green-500 mr-1"></i> Sans Effort</div>
+      </div>
+
+      <div class="bg-brand-dark text-white font-bold text-sm py-3 rounded-lg uppercase tracking-wide">
+        ✓ Compatible avec tous les types de moteurs (Essence & Diesel)
+      </div>
+
+      <div class="mt-8">
+        <a href="#commande" class="inline-block w-full max-w-sm bg-brand-success text-white font-heading font-bold uppercase text-lg py-4 px-8 rounded-lg shadow-md hover:bg-green-600 transition-colors">
+          COMMANDER <i class="fas fa-play animate-bounce-right ml-2 text-sm"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- [5] BÉNÉFICES PRODUIT -->
+  <section class="py-12 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <h2 class="text-3xl font-heading font-black text-center text-brand-dark mb-4">Bénéfices Uniques</h2>
+      <div class="w-16 h-1 bg-brand-primary mx-auto mb-8 rounded-full"></div>
+      
+      <p class="text-center text-gray-600 md:text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
+        L'additif OGAS Efficient est le fruit de nombreuses années de recherche. Conçu avec le pouvoir du "Thunder Shield", il agit directement au cœur de votre moteur pour créer un film protecteur ultra-résistant. Fini les réparations coûteuses et les pannes inattendues.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-10 items-center bg-white rounded-2xl shadow-md p-6 md:p-10">
+        <div>
+          <h3 class="text-2xl font-bold text-brand-dark mb-6 border-b pb-3">Ce Que Ça Fait Exactement :</h3>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check-circle text-green-500 text-xl mt-0.5"></i>
+              <span class="font-bold text-gray-700">Supprime la combustion excessive d'huile</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check-circle text-green-500 text-xl mt-0.5"></i>
+              <span class="font-bold text-gray-700">Réduit considérablement les bruits métalliques</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check-circle text-green-500 text-xl mt-0.5"></i>
+              <span class="font-bold text-gray-700">Diminue drastiquement les émissions de fumée noire</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check-circle text-green-500 text-xl mt-0.5"></i>
+              <span class="font-bold text-gray-700">Prolonge la durée de vie globale du moteur</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check-circle text-green-500 text-xl mt-0.5"></i>
+              <span class="font-bold text-gray-700">Empêche l'usure des pièces internes vitales</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="relative bg-gray-900 rounded-xl overflow-hidden shadow-inner flex flex-col items-center justify-center min-h-[300px]">
+          <img src="assets/ogas-podium.png" alt="OGAS Efficient sur podium" class="w-full h-full object-cover rounded-xl relative z-10">
+          <div class="absolute top-4 left-4 bg-brand-primary text-white text-xs font-black uppercase px-3 py-1 -rotate-12 rounded shadow-lg z-20">Technologie</div>
+          <div class="absolute bottom-4 right-4 bg-yellow-500 text-brand-dark text-xs font-black uppercase px-3 py-1 rotate-6 rounded shadow-lg z-20">Thunder Shield</div>
+        </div>
+      </div>
+
+      <div class="mt-10 text-center">
+        <a href="#commande" class="inline-block w-full max-w-sm bg-brand-success text-white font-heading font-bold uppercase text-lg py-4 px-8 rounded-lg shadow-md hover:bg-green-600 transition-colors">
+          COMMANDER MAINTENANT <i class="fas fa-play animate-bounce-right ml-2 text-sm"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- [6] AVIS CLIENTS -->
+  <section class="py-12 bg-white">
+    <div class="container mx-auto px-4 max-w-3xl">
+      <h2 class="text-3xl font-heading font-black text-center text-brand-dark mb-4">Preuves Utilisateurs</h2>
+      <div class="w-16 h-1 bg-brand-primary mx-auto mb-10 rounded-full"></div>
+      
+      <div class="space-y-4">
+        <!-- Avis 1 -->
+        <div class="bg-gray-50 border border-gray-100 p-5 rounded-xl">
+          <div class="flex justify-between items-start mb-2">
+            <div>
+              <p class="font-bold text-brand-dark">Ousmane Bah</p>
+              <div class="text-yellow-400 text-xs mt-1">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+            <span class="bg-green-100 text-green-700 text-[10px] font-bold px-2 py-1 rounded flex items-center gap-1">
+              <i class="fas fa-check"></i> ACHAT LIVRÉ
+            </span>
+          </div>
+          <p class="text-gray-600 italic text-sm mb-3">"Mon taxi fumait noir depuis des semaines. J'ai versé OGAS dans l'huile et après quelques kilomètres, la fumée a complètement disparu. Le moteur est super silencieux maintenant."</p>
+          <p class="text-[10px] text-gray-400 font-bold uppercase">🇬🇳 DEPUIS CONAKRY</p>
+        </div>
+
+        <!-- Avis 2 -->
+        <div class="bg-gray-50 border border-gray-100 p-5 rounded-xl">
+          <div class="flex justify-between items-start mb-2">
+            <div>
+              <p class="font-bold text-brand-dark">Abdoulaye Kourouma</p>
+              <div class="text-yellow-400 text-xs mt-1">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+            <span class="bg-green-100 text-green-700 text-[10px] font-bold px-2 py-1 rounded flex items-center gap-1">
+              <i class="fas fa-check"></i> ACHAT LIVRÉ
+            </span>
+          </div>
+          <p class="text-gray-600 italic text-sm mb-3">"Produit reçu rapidement. Très bien emballé. Je l'ai mis dans mon 4x4 et je sens que l'accélération répond beaucoup mieux."</p>
+          <p class="text-[10px] text-gray-400 font-bold uppercase">🇬🇳 DEPUIS LABÉ</p>
+        </div>
+
+        <!-- Avis 3 -->
+        <div class="bg-gray-50 border border-gray-100 p-5 rounded-xl">
+          <div class="flex justify-between items-start mb-2">
+            <div>
+              <p class="font-bold text-brand-dark">Mamadou Sylla</p>
+              <div class="text-yellow-400 text-xs mt-1">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+            <span class="bg-green-100 text-green-700 text-[10px] font-bold px-2 py-1 rounded flex items-center gap-1">
+              <i class="fas fa-check"></i> ACHAT LIVRÉ
+            </span>
+          </div>
+          <p class="text-gray-600 italic text-sm mb-3">"J'hésitais un peu pour le prix, mais ça vaut vraiment le coup pour éviter d'aller chez le mécanicien tout le temps."</p>
+          <p class="text-[10px] text-gray-400 font-bold uppercase">🇬🇳 DEPUIS KINDIA</p>
+        </div>
+      </div>
+
+      <div class="mt-10 text-center">
+        <a href="#commande" class="inline-block w-full max-w-sm bg-brand-success text-white font-heading font-bold uppercase text-lg py-4 px-8 rounded-lg shadow-md hover:bg-green-600 transition-colors">
+          COMMANDER <i class="fas fa-play animate-bounce-right ml-2 text-sm"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- [7] FOOTER MINIMAL -->
+  <footer class="bg-brand-dark text-white py-8 border-t-4 border-brand-primary text-center">
+    <div class="container mx-auto px-4">
+      <h3 class="font-heading font-bold text-xl mb-2">OC Business Center</h3>
+      <p class="text-gray-400 text-sm mb-4">Solutions automobiles premium en Guinée</p>
+      
+      <div class="flex justify-center items-center gap-2 mb-6">
+        <i class="fab fa-whatsapp text-green-500 text-xl"></i>
+        <span class="font-bold">+224 620 01 88 30</span>
+      </div>
+      
+      <div class="text-xs text-gray-500 space-y-2">
+        <p>Paiement sécurisé à la livraison. Livraison partout en Guinée.</p>
+        <p>&copy; 2026 OC Business Center. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOUTON COMMANDER STICKY MOBILE -->
+  <div class="fixed bottom-0 left-0 right-0 p-3 bg-white/90 backdrop-blur-md shadow-[0_-5px_15px_rgba(0,0,0,0.1)] border-t border-gray-100 z-50 md:hidden flex justify-center">
+    <a href="#commande" class="w-full max-w-md bg-brand-success text-white font-heading font-bold text-center uppercase text-lg py-3 rounded-lg shadow-lg hover:bg-green-600 active:scale-95 transition-all">
+      COMMANDER MAINTENANT
+    </a>
+  </div>
+
+  <script>
+    // Gestion dynamique du prix selon l'offre choisie
+    const offerSelect = document.getElementById('offerSelect');
+    const totalPriceDisplay = document.getElementById('totalPriceDisplay');
+    
+    // Prix de base
+    const basePrice = 250000;
+    const prices = {
+      "1": "250 000 GNF",
+      "2": "480 000 GNF",
+      "3": "700 000 GNF"
+    };
+
+    offerSelect.addEventListener('change', function() {
+      totalPriceDisplay.textContent = prices[this.value];
+    });
+
+    // Envoi de la commande via WhatsApp
+    function sendWhatsAppOrder() {
+      const name = document.getElementById('userName').value.trim();
+      const phone = document.getElementById('userPhone').value.trim();
+      const city = document.getElementById('userCity').value.trim();
+      const offerId = offerSelect.value;
+      const offerText = offerSelect.options[offerSelect.selectedIndex].text;
+      
+      if (!name || !phone || !city) {
+        alert("Veuillez remplir tous les champs du formulaire.");
+        return;
+      }
+      
+      // Formatage du message
+      let message = "📦 *NOUVELLE COMMANDE - OGAS EFFICIENT*\n\n";
+      message += "👤 Nom : " + name + "\n";
+      message += "📞 Tél : " + phone + "\n";
+      message += "📍 Ville : " + city + "\n";
+      message += "🛍️ Offre : " + offerText + "\n\n";
+      message += "Merci de me contacter pour la livraison.";
+      
+      const whatsappNumber = "224620018830";
+      const whatsappUrl = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(message);
+      
+      window.open(whatsappUrl, '_blank');
+    }
+  </script>
+</body>
+</html>
